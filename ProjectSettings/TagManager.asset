@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - UI
+  - 1
+  - 2
   layers:
   - Default
   - TransparentFX
@@ -45,6 +47,9 @@ TagManager:
   - name: Background
     uniqueID: 3527881891
     locked: 0
-  - name: Items
+  - name: Items&Maps
     uniqueID: 1053156357
+    locked: 0
+  - name: Cursor
+    uniqueID: 427215803
     locked: 0
