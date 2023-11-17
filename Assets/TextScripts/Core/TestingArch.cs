@@ -9,7 +9,7 @@ public class TestingArch : MonoBehaviour
     TextArchitect architect;
 
     string[] lines = new string[5]{
-        "This is my first textSDASDADDADADADADADADADADADADADADADASDASDASDASDASDASDASDASDASDASDASDASDASsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssD",
+        "This is my first textsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
         " and will be also my last text ",
         "TEst",
         "TOST",
