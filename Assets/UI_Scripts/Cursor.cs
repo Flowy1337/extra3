@@ -27,4 +27,5 @@ public class Cursorbehav : MonoBehaviour
         // Set the GameObject position to the mouse position
         transform.position = mousePosition;
     }
+   
 }

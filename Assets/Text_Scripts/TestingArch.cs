@@ -32,7 +32,7 @@ void Start()
     {
         Debug.LogError("DialogueSystem or its properties are not accessible.");
     }
-}
+}   
 
 
     // Update is called once per frame
