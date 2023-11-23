@@ -1,26 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TestingArch : MonoBehaviour
 {
 
     DialogueSystem ds;
     TextArchitect architect;
-
+    public GameObject target;
+    int i = 0;
     string[] lines = new string[5]{
-        "This is my first textSDASDADDADADADADADADADADADADADADADASDASDASDASDASDASDASDASDASDASDASDASDASsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssD",
-        " and will be also my last text ",
-        "TEst",
+        "Wer bist du? Woher kennst du meinen Namen? Ist egal. Ich kann jetzt nicht. Ich bin noch in der Arbeit.",
+        "Ist egal. Ich kann jetzt nicht. Ich bin noch in der Arbeit.",
         "TOST",
-        "LÜGE"
+        "LÜGE",
+        "te"
     };
 
     // Start is called before the first frame update
  // Start is called before the first frame update
 void Start()
 {
-    ds = DialogueSystem.instance;
+
+        ds = DialogueSystem.instance;
 
     // Check if DialogueSystem and its properties are accessible
     if (ds != null && ds.dialogueContainer != null && ds.dialogueContainer.dialogueText != null)
@@ -51,6 +54,7 @@ void Start()
                 
                 else{
                     architect.forceComplete();
+                    i++;
 
                 }
                 
@@ -58,10 +62,13 @@ void Start()
             }
             else{
                     architect.Build(lines[0]);
+                i++;
 
                 }
-         
-            
+            target.GetComponent<MeshRenderer>().enabled = true;
+
+
+
         }
         else if (Input.GetKeyDown(KeyCode.A)){
             architect.Append(lines[Random.Range(0,5)]);
