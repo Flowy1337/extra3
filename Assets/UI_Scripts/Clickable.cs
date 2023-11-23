@@ -24,10 +24,15 @@ public class MouseHoverCheck : MonoBehaviour
             transform.localScale = newScale;
 
             sizeUp = true;
-            Debug.Log("Mouse over: Object scaled up!");
+         
         }
-        Debug.Log("Mouse over: Object scaled up!");
+
+        if (Input.GetMouseButtonDown(0)){
+            Debug.Log("Set Varaible accordingly");
+        }
     }
+
+   
 
     void OnMouseExit()
     {
