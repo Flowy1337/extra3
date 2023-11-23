@@ -38,9 +38,11 @@ void Start()
     // Update is called once per frame
     void Update()
     {
+        
 
-        if(Input.GetKeyDown(KeyCode.Space)){
-
+        if (Input.GetKeyDown("space"))
+        {
+            Debug.Log("Testing!!!!!");
             if(architect.isBuilding){
 
                 if(!architect.hurryUp){
