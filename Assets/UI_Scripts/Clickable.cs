@@ -9,6 +9,7 @@ public class MouseHoverCheck : MonoBehaviour
     void Start()
     {
         originalScale = transform.localScale;
+
     }
 
     void Update()
@@ -26,7 +27,8 @@ public class MouseHoverCheck : MonoBehaviour
             transform.localScale = newScale;
 
             sizeUp = true;
-         
+
+
         }
 
         if (Input.GetMouseButtonDown(0)){
@@ -41,5 +43,6 @@ public class MouseHoverCheck : MonoBehaviour
         transform.localScale = originalScale;
         sizeUp = false;
         Debug.Log("Mouse exit: Object scaled down!");
+
     }
 }
