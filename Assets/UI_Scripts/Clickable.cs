@@ -25,7 +25,8 @@ public class MouseHoverCheck : MonoBehaviour
         {
             Vector3 newScale = originalScale * scaleFactor;
             transform.localScale = newScale;
-
+            Debug.Log("RidernoDiff");
+            
             sizeUp = true;
 
 

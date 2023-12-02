@@ -39,7 +39,7 @@ public class TextArchitect
     public   TextArchitect  (TextMeshPro tmpro_world){
         this.tmpro_world=tmpro_world;
     }
-
+    // Build(string: text) : Coroutine
     public Coroutine Build(string text){
         preText="";
         targetText=text;
@@ -111,7 +111,7 @@ public class TextArchitect
                 Prepare_Typewriter();
                break;
             case BuildMethod.fade:
-               Prepare_Fade();
+               //Prepare_Fade();
                break;
         }
 
@@ -142,9 +142,7 @@ public class TextArchitect
 
     }
 
-    private void Prepare_Fade(){
-
-    }
+  
 
     
 

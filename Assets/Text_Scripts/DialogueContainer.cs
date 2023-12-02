@@ -9,5 +9,4 @@ public class DialogueContainer
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
 
-  
 }
