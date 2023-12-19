@@ -8,7 +8,7 @@ public class TestingArch : MonoBehaviour
 
     DialogueSystem ds;
     TextArchitect architect;
-    public GameObject target;
+    //public GameObject target;
     int i = 0;
     string[] lines = new string[5]{
         "Wer bist du? Woher kennst du meinen Namen? Ist egal. Ich kann jetzt nicht. Ich bin noch in der Arbeit.",
@@ -65,7 +65,7 @@ void Start()
                 i++;
 
                 }
-            target.GetComponent<MeshRenderer>().enabled = true;
+           // target.GetComponent<MeshRenderer>().enabled = true;
 
 
 
