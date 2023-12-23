@@ -11,8 +11,6 @@ public class Tesint : MonoBehaviour
         StartCoroutine(Run());
 
 
-
-
         IEnumerator Run()
         {
             List<string> lines = FileManager.ReadTextAsset(fileName, true);
