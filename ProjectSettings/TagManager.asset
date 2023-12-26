@@ -8,6 +8,7 @@ TagManager:
   - 1
   - 2
   - CCTV
+  - display_text
   layers:
   - Default
   - TransparentFX

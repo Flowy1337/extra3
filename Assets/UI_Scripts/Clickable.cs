@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class MouseHoverCheck : MonoBehaviour
@@ -5,18 +6,12 @@ public class MouseHoverCheck : MonoBehaviour
     private Vector3 originalScale;
     bool sizeUp = false;
     public float scaleFactor = 1.2f;
-
+    public TextMeshProUGUI txt;
+    private bool selected = false;
+    private Handy handy = Handy.Instanz;
     void Start()
     {
         originalScale = transform.localScale;
-
-    }
-
-    void Update()
-    {
-        
-
-
     }
 
     void OnMouseOver()
@@ -25,15 +20,21 @@ public class MouseHoverCheck : MonoBehaviour
         {
             Vector3 newScale = originalScale * scaleFactor;
             transform.localScale = newScale;
-            Debug.Log("RidernoDiff");
-            
             sizeUp = true;
-
-
         }
 
         if (Input.GetMouseButtonDown(0)){
-            Debug.Log("Set Varaible accordingly");
+            if (txt.enabled)
+            {
+                handy.open_item();
+                txt.enabled = false;
+            }
+            else
+            {
+                handy.close_item();
+                handy.insert_text(txt.text);
+                txt.enabled = true;
+            }
         }
     }
 
@@ -43,7 +44,5 @@ public class MouseHoverCheck : MonoBehaviour
     {
         transform.localScale = originalScale;
         sizeUp = false;
-        Debug.Log("Mouse exit: Object scaled down!");
-
     }
 }
