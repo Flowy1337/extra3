@@ -10,11 +10,18 @@ public class ConversationManager
     public bool isRunning => process != null;
 
     private TextArchitect architect = null;
+    private bool userPromt = false;
 
     public ConversationManager(TextArchitect architect)
     {
         this.architect = architect;
+        DialogueSystem.onUserPrompt_Next += onUserPrompt_Next;
 
+    }
+
+    private void onUserPrompt_Next()
+    {
+        userPromt = true;
     }
 
     public void StartConversation(List<string> conversation)
@@ -70,7 +77,23 @@ public class ConversationManager
         
         architect.Build(line.dialogue);
         while (architect.isBuilding)
+        {
+            if (userPromt)
+            {
+                if (!architect.hurryUp)
+                    architect.hurryUp = false;
+                else
+                {
+                    architect.forceComplete();
+                }
+
+                userPromt = false;
+            }
+            
             yield return null;
+
+            yield return WaitForUserInput();
+        }
 
     }
 
@@ -79,6 +102,13 @@ public class ConversationManager
         Debug.Log("here " +line.commands);
         yield return null;
 
+    }
+
+    IEnumerator WaitForUserInput()
+    {
+        while (!userPromt)
+            yield return null;
+        userPromt = false;
     }
     
 }

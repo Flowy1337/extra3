@@ -9,8 +9,11 @@ public class DialogueSystem  : MonoBehaviour
     public DialogueContainer dialogueContainer = new DialogueContainer();
     private ConversationManager conversationManager;
     private TextArchitect architect;
-
     public static DialogueSystem instance;
+
+    public delegate void DialogueSystemEvent();
+
+    public event DialogueSystemEvent onUserPrompt_Next;
     public bool isRunningConversation => conversationManager.isRunning;
 
     private void Awake(){
@@ -34,6 +37,11 @@ public class DialogueSystem  : MonoBehaviour
         architect = new TextArchitect(dialogueContainer.dialogueText);
         conversationManager = new ConversationManager(architect);
 
+    }
+
+    public void OnUserPromt_Next()
+    {
+        onUserPrompt_Next?.Invoke();
     }
 
     public void Say(string dialogue)

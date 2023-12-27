@@ -79,6 +79,7 @@ public class TextArchitect
                break;
 
         }
+        OnComplete();
 
     }
     
