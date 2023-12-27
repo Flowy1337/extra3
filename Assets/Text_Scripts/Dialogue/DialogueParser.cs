@@ -62,7 +62,7 @@ public class DialogueParser
             if (dialogueStart != -1 && dialogueEnd != -1 && (commandStart == -1 || commandStart > dialogueEnd))
             {
                 // Dialogue and Command present
-                dialogue = rawLine.Substring(dialogueStart + 1, dialogueEnd - dialogueStart).Replace("\\\"","");
+                dialogue = rawLine.Substring(dialogueStart + 1, (dialogueEnd - dialogueStart)-1).Replace("\\\"","");
                 if (commandStart != -1)
                 {
                     commands = rawLine.Substring(commandStart).Trim();
@@ -78,7 +78,7 @@ public class DialogueParser
         
         
         
-        //Debug.Log(rawLine.Substring(dialogueStart+1,(dialogueEnd-dialogueStart)-1));
+        
         return (dialogue, commands);
     }
     

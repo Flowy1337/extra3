@@ -1,5 +1,7 @@
-"Hello World!" showItems(items,playMusic)
+"Hello Worldasd!"setScene("Back")
+"Hello Woasdasdasdarldasd!"setScene("Yellow")
 
-setScene("darkPicture")
 
-"Hello this is Annie from Mannheim"
+
+
+

@@ -9,6 +9,7 @@ public class TestParsing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         sendFiletoParse();
     }
 
@@ -26,4 +27,6 @@ public class TestParsing : MonoBehaviour
 
         }
         
-    }}
+    }
+    
+}

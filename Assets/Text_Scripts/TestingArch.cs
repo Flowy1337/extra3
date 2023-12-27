@@ -45,7 +45,7 @@ void Start()
 
         if (Input.GetKeyDown("space"))
         {
-            Debug.Log("Testing!!!!!");
+           
             if(architect.isBuilding){
 
                 if(!architect.hurryUp){
@@ -61,7 +61,8 @@ void Start()
                 
             }
             else{
-                    architect.Build(lines[0]);
+                Debug.Log(lines[0]);
+                architect.Build(lines[0]);
                 i++;
 
                 }
