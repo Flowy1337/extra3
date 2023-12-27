@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Decision_Border : MonoBehaviour
+class Decision_Border : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -19,11 +19,11 @@ public class Decision_Border : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        
         // Check if the collision is with Square A
         if (collision.gameObject.CompareTag("1"))
         {
             // Your code for when a collision with Square A occurs
-            Debug.Log("Collided with Square A");
         }
     }
 }
