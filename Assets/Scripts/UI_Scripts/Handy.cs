@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-class Handy : Items
+public class Handy : Items
 {
     private static Handy _instance;
     private static int _count;
@@ -10,7 +10,7 @@ class Handy : Items
     private bool _active;
     private Handy()
     {
-        
+       
     }
     public static Handy Instanz
     {
@@ -50,5 +50,10 @@ class Handy : Items
         { 
             _textHistory += str;
         }
+    }
+
+    public int get_count()
+    {
+        return _count;
     }
 }
