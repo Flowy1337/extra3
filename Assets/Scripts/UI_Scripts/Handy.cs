@@ -35,6 +35,7 @@ public class Handy : Items
     {
         _count++;
         _active = true;
+        Debug.Log("OPENING NOW..." + _active);
 
     }
 
