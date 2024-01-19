@@ -75,7 +75,7 @@ public class ConversationManager
     IEnumerator Line_RunDialogue(Dialogue_Line line)
     {
         
-        architect.Build(line.dialogue);
+        /*architect.Build(line.dialogue);
         while (architect.isBuilding)
         {
             if (userPromt)
@@ -91,9 +91,9 @@ public class ConversationManager
             }
             
             yield return null;
-
+*/
             yield return WaitForUserInput();
-        }
+        //}
 
     }
 

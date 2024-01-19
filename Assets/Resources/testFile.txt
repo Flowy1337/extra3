@@ -1,4 +1,4 @@
-"Hello This is Sascha and Tobias from mannheim!"setScene("Back")
+"Hello This is Sascha and.{a} Tobias from... {wa 1} mannheim!"setScene("Back")
 "Hello Woasdasdasdarldasd!"setScene("Yellow")
 
 
