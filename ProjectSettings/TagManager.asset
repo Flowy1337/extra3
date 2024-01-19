@@ -9,6 +9,7 @@ TagManager:
   - 2
   - CCTV
   - display_text
+  - Notepad
   layers:
   - Default
   - TransparentFX
