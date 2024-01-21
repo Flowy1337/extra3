@@ -32,4 +32,17 @@ public class Map_test
         // Use yield to skip a frame.
         yield return null;
     }
+
+    [Test]
+    public void decisiontest()
+    {
+        storage storage = storage.Storage;
+        Decision decision = new Decision(1, "Cave or forrest?", 0,0);
+        storage.AddDecision(decision);
+        Assert.IsTrue(storage.getDecision(decision.getDecisionID())!=null);
+        reciever reciever = reciever.Reciever;
+        
+        reciever.show();
+        reciever.getDecisions_from_txt();
+    }
 }

@@ -7,11 +7,13 @@ public class Decision
     private int _decisionID;
     private string _decisionDescription;
     private int _decisionCall; //When the decision was made e.g, how many decision were made prior to this
-    public Decision(int decisionID, string decisionDescription,int decisionCall)
+    private int _decisionFamily;
+    public Decision(int decisionID, string decisionDescription,int decisionCall,int decisionFamily)
     {
         this._decisionID = decisionID;
         this._decisionDescription = decisionDescription;
         this._decisionCall = decisionCall;
+        this._decisionFamily = decisionFamily;
     }
 
     
