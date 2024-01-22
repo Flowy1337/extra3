@@ -6,13 +6,15 @@ using UnityEngine;
 public class storage 
     {
         private static storage _storage;
-        Dictionary<int, Decision> myMap = new Dictionary<int, Decision>();
+        Dictionary<int, Decision> myMap = new Dictionary<int, Decision>(); //!Dictionary since we wan't fast acess to made decisions
         
 
-        private storage(){
+        private storage(){         
+
 
             
         }
+        //!Generate a storage instanz via a singleton pattern,we use a singleton pattern since we only allow one object of the class storage to exist at a time
         public static storage Storage
         {
             get
@@ -24,17 +26,23 @@ public class storage
 
                 return _storage;
             }
-        }
 
+        }
         public void AddDecision(Decision d)
         {
-            
                 myMap.Add(d.getDecisionID(),d);
-        }
+                //!Adds a decision object to the Dictionary
 
+        }
+        //!Returns the Decision made by the player, the decisionID is a unique value for a given Decision
         public Decision getDecision(int decisionID)
         {
-            return myMap[decisionID];
+            //!Retrieves a specific Decision which is identified by the unique decisionID
+            
+            
+                return myMap[decisionID];
+            
+          
         }
 
         public void logging()
@@ -50,7 +58,7 @@ public class storage
                 Decision decision = kvp.Value;
 
                 Debug.Log($"Key: {key}, Description: {decision.getdecisionDescription()}");
-                // Access other properties of the Decision class if needed
+                //!Prints all Decisions which are currently stored to the Console, this is mainly for debugging purposes
             }
         }
 

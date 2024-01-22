@@ -12,9 +12,9 @@ public class TextHoverHighlight : MonoBehaviour
         // Get the TMP_Text component on the GameObject
         textMesh = GetComponent<TMP_Text>();
        
-        // Store the original color of the text
 
-        originalColor = textMesh.color;
+        originalColor = textMesh.color;         //!Store the original color of the text
+
         /*GameObject otherObject = GameObject.Find("CCTV");
 
         if (otherObject != null)
@@ -25,15 +25,13 @@ public class TextHoverHighlight : MonoBehaviour
 
     void OnMouseEnter()
     {
-        // Change the text color to the hover color when the mouse enters
+        //! Change the text color to the hover color when the mouse enters
         textMesh.color = hoverColor;
-        //animator.SetBool("sizeUp", true);
     }
 
     void OnMouseExit()
     {
-        // Change the text color back to the original color when the mouse exits
+        //! Change the text color back to the original color when the mouse exits
         textMesh.color = originalColor;
-        //animator.SetBool("sizeUp", false);
     }
 }

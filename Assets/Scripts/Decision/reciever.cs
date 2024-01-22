@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class reciever
 {
-    // Start is called before the first frame update
     private static reciever _reciever;
     private static List<string> decision_container = FileManager.ReadTextAsset("testFile");
 
@@ -16,6 +15,7 @@ public class reciever
 
     }
 
+    //!Reciever is build by the singleton design pattern
     public static reciever Reciever
     {
         get
@@ -31,6 +31,8 @@ public class reciever
 
     public void show()
     {
+        //!Show logs all possible decisions which are avaliable in the game line by line to the console
+        //! This is mainly for debugging purposes
         Debug.Log(decision_container.Count);
         foreach (var VARIABLE in decision_container)
         {
@@ -41,6 +43,7 @@ public class reciever
 
     public void getDecisions_from_txt()
     {
+        //!Retrieves plaine text from a txt file, then converts each line to a decision object and stores it in the List
         decision_container.Clear();
         List<string> lines = FileManager.ReadTextAsset("testFile");
 
