@@ -10,6 +10,12 @@ public class Decision
     private string _decisionDescription;
     private int _decisionCall; 
     private int _decisionFamily;
+    
+    // Public properties for JSON deserialization
+    public int DecisionID { get { return _decisionID; } }
+    public string DecisionDescription { get { return _decisionDescription; } }
+    public int DecisionCall { get { return _decisionCall; } }
+    public int DecisionFamily { get { return _decisionFamily; } }
     public Decision(int decisionID, string decisionDescription,int decisionCall,int decisionFamily)
     {
         //!The Decision object stores all relevant information to identifie a decision

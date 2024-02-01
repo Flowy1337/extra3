@@ -10,6 +10,10 @@ TagManager:
   - CCTV
   - display_text
   - Notepad
+  - A1
+  - A2
+  - A3
+  - A4
   layers:
   - Default
   - TransparentFX

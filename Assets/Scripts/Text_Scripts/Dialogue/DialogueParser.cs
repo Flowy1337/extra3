@@ -10,9 +10,9 @@ public class DialogueParser
     private const string commandRegexPattern = "\\w*[^\\s]\\(";
     public static Dialogue_Line Parse(string rawLine)
     {
-        Debug.Log($"Parsing rawLine- '{rawLine}'");
+     
         (string dialogue, string commands) = RipContent(rawLine);
-        Debug.Log($"Dialogue= '{dialogue}' \nCommand='{commands}'");
+       
         return new Dialogue_Line(dialogue, commands);
     }
 

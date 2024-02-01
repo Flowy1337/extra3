@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MouseHoverCheck : MonoBehaviour
 {
+    storage storage = storage.Storage;
+    private Decision d = new Decision(1, "Koray has been slayn?", 0, 0);
     private Vector3 originalScale;
     bool sizeUp = false;
     public float scaleFactor = 1.2f;
@@ -37,6 +39,7 @@ public class MouseHoverCheck : MonoBehaviour
             if (txt.enabled)
             {
                 foo();
+                storage.AddDecision(d);
                 txt.enabled = false;
                 sptr = notePad.GetComponent<SpriteRenderer>();
                 sptr.enabled = false;

@@ -30,7 +30,12 @@ public class storage
         }
         public void AddDecision(Decision d)
         {
+            if (!myMap.ContainsKey(d.getDecisionID()))
+            {
                 myMap.Add(d.getDecisionID(),d);
+            }
+          
+            
                 //!Adds a decision object to the Dictionary
 
         }
@@ -39,10 +44,8 @@ public class storage
         {
             //!Retrieves a specific Decision which is identified by the unique decisionID
             
-            
                 return myMap[decisionID];
-            
-          
+                
         }
 
         public void logging()
@@ -52,6 +55,7 @@ public class storage
 
         public void getAllDecision()
         {
+            
             foreach (KeyValuePair<int, Decision> kvp in myMap)
             {
                 int key = kvp.Key;
@@ -62,6 +66,15 @@ public class storage
             }
         }
 
+        public Boolean contains(Decision d)
+        {
+           return myMap.ContainsKey(d.getDecisionID());
+        }
+
+        public int size()
+        {
+            return myMap.Count;
+        }
      
 
     

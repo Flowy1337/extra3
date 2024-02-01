@@ -41,8 +41,7 @@ public class Map_test
         storage.AddDecision(decision);
         Assert.IsTrue(storage.getDecision(decision.getDecisionID())!=null);
         reciever reciever = reciever.Reciever;
-        
-        reciever.show();
-        reciever.getDecisions_from_txt();
+       
+
     }
 }
