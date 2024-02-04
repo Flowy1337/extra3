@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class TestDialogueFiles : MonoBehaviour
@@ -25,8 +26,8 @@ public class TestDialogueFiles : MonoBehaviour
             foreach (DL_Dialogue_DATA.Dialogue_SEGMENT segment in dline.dialogue.segments)
             {
                 Debug.Log(segment.startSignal.ToString());
-                Debug.Log($"Segment ='{segment.dialogue}' [Singal={segment.startSignal.ToString()}{(segment.signalDelay > 0 ? $" {segment.signalDelay}" : $"")}");
-                
+                 Debug.Log($"Segment ='{segment.dialogue}' [Singal={segment.startSignal.ToString()}{(segment.signalDelay > 0 ? $" {segment.signalDelay}" : $"")}");
+
             }
             {
                 

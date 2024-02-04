@@ -51,10 +51,24 @@ public class Handy : Items
         { 
             _textHistory += str;
         }
+        else
+        {
+            _textHistory += "Bad req";
+        }
     }
 
     public int get_count()
     {
         return _count;
+    }
+
+    public string return_textHistory()
+    {
+        return _textHistory;
+    }
+
+    public void DeleteTextHistory()
+    {
+        _textHistory = "";
     }
 }

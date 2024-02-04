@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class storage 
+public class storage : text_holder
     {
         private static storage _storage;
         Dictionary<int, Decision> myMap = new Dictionary<int, Decision>(); //!Dictionary since we wan't fast acess to made decisions
@@ -28,19 +28,20 @@ public class storage
             }
 
         }
-        public void AddDecision(Decision d)
+        public override void AddDecision(Decision d)
         {
-            if (!myMap.ContainsKey(d.getDecisionID()))
+            if (!myMap.ContainsKey(d.getDecisionID()) && !myMap.ContainsKey(d.getDecisionID() - 1) &&
+                !myMap.ContainsKey(d.getDecisionID() - 2) && !myMap.ContainsKey(d.getDecisionID() - 3))
             {
                 myMap.Add(d.getDecisionID(),d);
+                return;
             }
-          
+            Debug.Log("misses");
             
                 //!Adds a decision object to the Dictionary
-
         }
         //!Returns the Decision made by the player, the decisionID is a unique value for a given Decision
-        public Decision getDecision(int decisionID)
+        public override Decision GetDecision(int decisionID)
         {
             //!Retrieves a specific Decision which is identified by the unique decisionID
             
@@ -71,11 +72,16 @@ public class storage
            return myMap.ContainsKey(d.getDecisionID());
         }
 
-        public int size()
+        public override int Size()
         {
+            
             return myMap.Count;
         }
-     
+
+        public void Droptable()
+        {
+            myMap.Clear();
+        }
 
     
 }

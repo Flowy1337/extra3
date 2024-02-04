@@ -6,7 +6,7 @@ public class Read_JSON : MonoBehaviour
     //!Start is called before the first frame update,by doing this we ensure that alle Decisions are loaded before the game "starts".
     public TextAsset json;
     reciever Reciever = reciever.Reciever;
-    void Start()
+    public void Awake()
     {
         List<JSONExample> examples = JSONReader.GetJSON(json);
         
@@ -15,13 +15,14 @@ public class Read_JSON : MonoBehaviour
             //!Iterate through each json Objet in examples and create a corresponding Decision Object.
             //!Add Decision to reciever._allDecisions.
             Decision d = new Decision(example._decisionID, example._decisionDescription, example._decisionCall,example._decisionFamily);
-            Reciever.AddtoContainer(d);
+            Reciever.AddDecision(d);
         }
     }
 
     [System.Serializable]
     public class JSONExample
     {
+        //!According member variables of the Decision Class
         public int _decisionID;
         public string _decisionDescription;
         public int _decisionCall;

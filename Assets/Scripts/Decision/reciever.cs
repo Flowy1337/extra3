@@ -1,13 +1,12 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.IO;
-using Unity.Plastic.Newtonsoft.Json;
-using UnityEngine;
 
-public class reciever
+
+public class reciever : text_holder
 {
+    //!The reciever class holds a Dictionary _allDecisions, as the name implies, all possible Decisions are stored here.
+    
     private static reciever _reciever;
-    Dictionary<int, Decision> _allDecisions = new Dictionary<int, Decision>();
+    Dictionary<int, Decision> allDecisions = new Dictionary<int, Decision>();
 
 
     private reciever()
@@ -29,39 +28,32 @@ public class reciever
             return _reciever;
         }
     }
-
-    public void show()
-    {
-        //!Show logs all possible decisions which are avaliable in the game line by line to the console
-        //! This is mainly for debugging purposes
-      Debug.Log("Hello Recievi");
     
-      
-    }
-
-    public void AddtoContainer(Decision d)
+    public override void AddDecision(Decision d)
     {
-        if (!_allDecisions.ContainsKey(d.getDecisionID()))
+        if (!allDecisions.ContainsKey(d.getDecisionID()))
         {
-            _allDecisions.Add(d.getDecisionID(),d);
+            //! Add a decision to _allDecisions.
+            allDecisions.Add(d.getDecisionID(),d);
         }
     }
     
-    public Decision getDecision(int decisionID)
+    public override Decision GetDecision(int decisionID)
     {
         //!Retrieves a specific Decision which is identified by the unique decisionID
-        
-        return _allDecisions[decisionID];
-                
+        return allDecisions[decisionID];
     }
 
-    public int size()
+    public override int Size()
     {
-        return _allDecisions.Count;
+        return allDecisions.Count;
     }
 
   
-  
+    public void Droptable()
+    {
+        allDecisions.Clear();
+    }
 
 
  

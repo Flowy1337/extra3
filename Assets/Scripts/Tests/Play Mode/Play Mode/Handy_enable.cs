@@ -13,7 +13,7 @@ public class Handy_enable
     public void SetUp()
     {
         gameObject = GameObject.Instantiate(new GameObject());
-        handy = gameObject.AddComponent<Handy>();
+        //handy = gameObject.AddComponent<Handy>();
         
     }
     // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
