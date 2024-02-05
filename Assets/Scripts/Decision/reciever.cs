@@ -57,6 +57,5 @@ public class reciever : text_holder
 
 
  
-
-   
+  
 }

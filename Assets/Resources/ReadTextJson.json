@@ -1,0 +1,7 @@
+{
+  "textFields": [
+    "Hello, World!",
+    "This is a TextMeshPro example.",
+    "You can load these strings into TextMeshPro fields."
+  ]
+}

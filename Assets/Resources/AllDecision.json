@@ -1,5 +1,5 @@
 ﻿[
-  { "_decisionID": 1, "_decisionDescription": "Go to the cave", "decisionCall": 1, "_decisionFamily": 1 },
+  { "_decisionID": 1, "_decisionDescription": "Go to the caves", "decisionCall": 1, "_decisionFamily": 1 },
   { "_decisionID": 2, "_decisionDescription": "Drink from river", "decisionCall": 1, "_decisionFamily": 1 },
   { "_decisionID": 3, "_decisionDescription": "Jump over hill", "decisionCall": 1, "_decisionFamily": 1 },
   { "_decisionID": 4, "_decisionDescription": "Hide", "decisionCall": 1, "_decisionFamily": 1 },
