@@ -30,14 +30,11 @@ public class storage : text_holder
         }
         public override void AddDecision(Decision d)
         {
-            if (!myMap.ContainsKey(d.getDecisionID()) && !myMap.ContainsKey(d.getDecisionID() - 1) &&
-                !myMap.ContainsKey(d.getDecisionID() - 2) && !myMap.ContainsKey(d.getDecisionID() - 3))
+            if (!myMap.ContainsKey(d.getDecisionID()))
             {
                 myMap.Add(d.getDecisionID(),d);
-                return;
+                
             }
-            Debug.Log("misses");
-            
                 //!Adds a decision object to the Dictionary
         }
         //!Returns the Decision made by the player, the decisionID is a unique value for a given Decision

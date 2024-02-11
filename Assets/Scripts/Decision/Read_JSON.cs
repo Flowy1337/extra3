@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,8 +15,14 @@ public class Read_JSON : MonoBehaviour
         {
             //!Iterate through each json Objet in examples and create a corresponding Decision Object.
             //!Add Decision to reciever._allDecisions.
-            Decision d = new Decision(example._decisionID, example._decisionDescription, example._decisionCall,example._decisionFamily);
+            string requirment = example._requirment;
+            AllItems _requirment = (AllItems)Enum.Parse(typeof(AllItems),requirment);
+            string reward = example._reward;
+            AllItems _reward = (AllItems)Enum.Parse(typeof(AllItems), reward);
+            Decision d = new Decision(example._decisionID, example._decisionDescription, example._decisionCall,
+                example._decisionFamily,_requirment,_reward);
             Reciever.AddDecision(d);
+          
         }
     }
 
@@ -27,6 +34,9 @@ public class Read_JSON : MonoBehaviour
         public string _decisionDescription;
         public int _decisionCall;
         public int _decisionFamily;
+        public string _requirment;
+        public string _reward;
+
     }
 
     public static class JSONReader
@@ -35,6 +45,7 @@ public class Read_JSON : MonoBehaviour
         {
             // !Wrap the JSON array with a root object to make it parseable
             string jsonString = $"{{\"data\":{json.text}}}";
+            Debug.Log(jsonString);
             JSONWrapper wrapper = JsonUtility.FromJson<JSONWrapper>(jsonString);
 
             //! Extract the list of JSONExample objects from the root object

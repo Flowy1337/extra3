@@ -10,19 +10,24 @@ public class Decision
     private string _decisionDescription;
     private int _decisionCall; 
     private int _decisionFamily;
-    
+
+    private AllItems _requirment;
+
+    private AllItems _reward;
     // Public properties for JSON deserialization
     public int DecisionID { get { return _decisionID; } }
     public string DecisionDescription { get { return _decisionDescription; } }
     public int DecisionCall { get { return _decisionCall; } }
     public int DecisionFamily { get { return _decisionFamily; } }
-    public Decision(int decisionID, string decisionDescription,int decisionCall,int decisionFamily)
+    public Decision(int decisionID, string decisionDescription,int decisionCall,int decisionFamily,AllItems requirment,AllItems reward)
     {
         //!The Decision object stores all relevant information to identifie a decision
         this._decisionID = decisionID;
         this._decisionDescription = decisionDescription;
         this._decisionCall = decisionCall;
         this._decisionFamily = decisionFamily;
+        this._requirment = requirment;
+        this._reward = reward;
     }
 
     
@@ -43,6 +48,11 @@ public class Decision
         //! returns the decisionCall as an int, the value represents the order in which this decision was made
 
         return this._decisionCall;
+    }
+
+    public AllItems getReward()
+    {
+        return this._reward;
     }
    
 }

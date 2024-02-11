@@ -1,68 +1,49 @@
-using UnityEngine;
-using TMPro;
 using System.Collections.Generic;
+using UnityEngine;
 
-public class JsonLoader : MonoBehaviour
+public class ReadTextJSON : MonoBehaviour
 {
+    //!Start is called before the first frame update,by doing this we ensure that alle Decisions are loaded before the game "starts".
+    public TextAsset json;
+    TextReciever textReciever = TextReciever.textReciever;
+    public void Awake()
+    {
+        List<JSONExample> examples = JSONReader.GetJSON(json);
+        
+        foreach (var example in examples)
+        {
+            //!Iterate through each json Objet in examples and create a corresponding Decision Object.
+            //!Add Decision to reciever._allDecisions.
+            TText t = new TText(example._ttextID, example._ttextDescription);
+            textReciever.AddTText(t);
+        }
+    }
+
     [System.Serializable]
-    public class JsonData
+    public class JSONExample
     {
-        public List<string> textFields;
+        //!According member variables of the Decision Class
+        public int _ttextID;
+        public string _ttextDescription;
     }
 
-    // Reference to your TextMeshPro field in Unity
-    public TextMeshProUGUI textMeshProField;
-
-    // Serialized field for the JSON data
-    [SerializeField]
-    private TextAsset jsonFile;
-
-    // Index to keep track of the current string
-    private int currentIndex = 0;
-
-    // Declare jsonData here
-    private JsonData jsonData;
-
-    void Start()
+    public static class JSONReader
     {
-        LoadJsonData();
-        ShowCurrentString();
-    }
+        public static List<JSONExample> GetJSON(TextAsset json)
+        {
+            // !Wrap the JSON array with a root object to make it parseable
+            string jsonString = $"{{\"data\":{json.text}}}";
+            JSONWrapper wrapper = JsonUtility.FromJson<JSONWrapper>(jsonString);
 
-    void Update()
-    {
-        // Check for mouse click
-        if (Input.GetMouseButtonDown(0))
-        {
-            // Increment index and show the next string
-            currentIndex = (currentIndex + 1) % jsonData.textFields.Count;
-            ShowCurrentString();
+            //! Extract the list of JSONExample objects from the root object
+            return wrapper.data;
         }
-    }
 
-    void LoadJsonData()
-    {
-        // Load JSON data from the TextAsset
-        if (jsonFile != null)
+        [System.Serializable]
+        private class JSONWrapper
         {
-            jsonData = JsonUtility.FromJson<JsonData>(jsonFile.text);
-        }
-        else
-        {
-            Debug.LogError("No JSON file assigned in the Unity Editor.");
-        }
-    }
-
-    void ShowCurrentString()
-    {
-        // Display the current string in the TextMeshPro field
-        if (jsonData != null && jsonData.textFields.Count > 0)
-        {
-            textMeshProField.text = jsonData.textFields[currentIndex];
-        }
-        else
-        {
-            Debug.LogError("Invalid or insufficient data in the JSON object.");
+            
+            public List<JSONExample> data;
         }
     }
 }

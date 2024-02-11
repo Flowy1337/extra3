@@ -4,14 +4,14 @@ using NUnit.Framework;
 
 public class Decision_Test
 {
-    Decision d1 = new Decision(1, "Go to the cave", 1, 1);
-    Decision d2 = new Decision(2, "Drink from the river", 1, 1);
-    Decision d3 = new Decision(3, "Jump over the hill", 1, 1);
-    Decision d4 = new Decision(4, "Hide", 1, 1);
-    Decision d5 = new Decision(5, "Explore the forest", 1, 2);
-    Decision d6 = new Decision(6, "Climb a tree", 1, 2);
-    Decision d7 = new Decision(7, "Follow the path", 1, 2); 
-    Decision d8= new Decision(8, "Go home", 1, 2); 
+    Decision d1 = new Decision(1, "Go to the cave", 1, 1,AllItems.Bag,AllItems.Knife);
+    Decision d2 = new Decision(2, "Drink from the river", 1, 1,AllItems.Bag,AllItems.Knife);
+    Decision d3 = new Decision(3, "Jump over the hill", 1, 1,AllItems.Bag,AllItems.Knife);
+    Decision d4 = new Decision(4, "Hide", 1, 1,AllItems.Bag,AllItems.Knife);
+    Decision d5 = new Decision(5, "Explore the forest", 1, 2,AllItems.Bag,AllItems.Knife);
+    Decision d6 = new Decision(6, "Climb a tree", 1, 2,AllItems.Bag,AllItems.Knife);
+    Decision d7 = new Decision(7, "Follow the path", 1, 2,AllItems.Bag,AllItems.Knife); 
+    Decision d8= new Decision(8, "Go home", 1, 2,AllItems.Bag,AllItems.Knife); 
     reciever reciever = reciever.Reciever;
     storage storage = storage.Storage;
 
@@ -66,14 +66,11 @@ public class Decision_Test
     [Test]
     public void make_decision()
     {
-        //!Adding decisions from the same set, hence decisions which are in range Decision_old.id - Decision_new.id<4 are not allowed.
         storage.AddDecision(d1);
-        storage.AddDecision(d2);
-        storage.AddDecision(d3);
-        storage.AddDecision(d4);
         Assert.AreEqual(storage.Size(),1);
-        storage.AddDecision(d5);
-        Assert.AreEqual(storage.Size(),2); //! Since d5 is out of range, OK
+        Decision dnew = d1;
+        storage.AddDecision(dnew);
+        Assert.AreEqual(storage.Size(),1); //! Since dnew is the same decision should not be added
         
     }
 
