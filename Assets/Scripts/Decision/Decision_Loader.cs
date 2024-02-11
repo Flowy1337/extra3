@@ -1,43 +1,77 @@
-using System;
+using System.Collections;
 using UnityEngine;
 using TMPro;
+
 public class Decision_Loader : MonoBehaviour
 {
-    //!We've decided to make a "setter" class for setting current Decision string.
-    //!By doing it this way, we can ensure that there is no conflict between several class objects.
     private readonly reciever reciever = reciever.Reciever;
     private readonly TextReciever textReciever = TextReciever.textReciever;
     public TextMeshProUGUI ans1;
     public TextMeshProUGUI ans2;
     public TextMeshProUGUI ans3;
     public TextMeshProUGUI ans4;
-    public TextMeshProUGUI text;
+    public TextMeshProUGUI Text;
+
+    private float defaultDelay = 0.1f; // Default delay value
 
     private void Start()
     {
-        //LoadintoObjects(1); //!Load the first set into the answer Objects, only do this once!.
         LoadTextintoObject(1);
     }
 
-
-    // Use OnMouseDown instead of Update
     private void LoadintoObjects(int start)
     {
-        //!Load the new set of decisions into the Objects, this can be done since we always give 4 defined decisions as an option
-        //! We do this in this class since an easy access to all Objects can be granted
         ans1.text = reciever.GetDecision(start).getdecisionDescription();
-        ans2.text = reciever.GetDecision(start+1).getdecisionDescription();
-        ans3.text = reciever.GetDecision(start+2).getdecisionDescription();
-        ans4.text = reciever.GetDecision(start+3).getdecisionDescription();
-        
+        ans2.text = reciever.GetDecision(start + 1).getdecisionDescription();
+        ans3.text = reciever.GetDecision(start + 2).getdecisionDescription();
+        ans4.text = reciever.GetDecision(start + 3).getdecisionDescription();
     }
 
     public void LoadTextintoObject(int to_call)
     {
-        text.text = textReciever.GetTText(to_call).getdecisionDescription();
-        int start = to_call * 4 - 3;
-        LoadintoObjects(start);
+        StartCoroutine(TypeTextAndLoad(to_call));
     }
 
-    
+    IEnumerator TypeTextAndLoad(int to_call)
+    {
+        // Disable answer objects before typing effect
+        ans1.gameObject.SetActive(false);
+        ans2.gameObject.SetActive(false);
+        ans3.gameObject.SetActive(false);
+        ans4.gameObject.SetActive(false);
+
+       
+
+        
+        yield return StartCoroutine(TypeText(textReciever.GetTText(to_call).getdecisionDescription(), 0.03f));
+
+        // Enable answer objects after typing effect
+        ans1.gameObject.SetActive(true);
+        ans2.gameObject.SetActive(true);
+        ans3.gameObject.SetActive(true);
+        ans4.gameObject.SetActive(true);
+
+        int start = to_call * 4 - 3;
+        LoadintoObjects(start);
+
+         
+    }
+
+    IEnumerator TypeText(string text, float delay)
+    {
+        Text.text = ""; // Clear existing text
+        foreach (char letter in text)
+        {
+            Text.text += letter;
+
+            // Check for left mouse button click to skip typing effect
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Text.text = text;
+                break;
+            }
+
+            yield return new WaitForSeconds(delay);
+        }
+    }
 }
