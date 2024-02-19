@@ -67,6 +67,7 @@ public class Decision_Loader : MonoBehaviour
             // Check for left mouse button click to skip typing effect
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                Debug.Log("Called");
                 Text.text = text;
                 break;
             }
