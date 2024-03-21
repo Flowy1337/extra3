@@ -12,12 +12,16 @@ public class Click_Decision : MonoBehaviour
     public Decision_Loader decisionLoader;
     private static int jumpto = 1;
     Inventory inventory = Inventory.inventory;
+    public int parseDescionID=1;
     void Start()
     {
         reciever = reciever.Reciever;
     }
-   
- 
+
+    public int GetParseDecisionID()
+    {
+        return parseDescionID;
+    }
    
     private void OnMouseDown()
     {
@@ -35,31 +39,38 @@ public class Click_Decision : MonoBehaviour
         {
             //!If a Object is clicked we add the Decision to storage._myMap, then increment round+=4 to recieve the next block of decisions
             case "A1":
+                Debug.Log("1 Antwort" + parseDescionID);
                 storage.AddDecision(reciever.GetDecision(_round)); //Round has to be the first decision of the current family
                 jumpto = reciever.GetDecision(_round).getdecisionCall();
                 inventory.AddtoInventory(reciever.GetDecision(_round).getReward());
+                parseDescionID = reciever.GetDecision(_round).getDecisionID();
 
                 break;
             case "A2":
+              
                 storage.AddDecision(reciever.GetDecision(_round+1));
                 jumpto = reciever.GetDecision(_round+1).getdecisionCall();
                 inventory.AddtoInventory(reciever.GetDecision(_round+1).getReward());
+                parseDescionID = reciever.GetDecision(_round).getDecisionID()+1;
+                Debug.Log("2 Antwort" + parseDescionID);
 
                 break;
             case "A3":
                 storage.AddDecision(reciever.GetDecision(_round+2));
                 jumpto = reciever.GetDecision(_round+2).getdecisionCall();
                 inventory.AddtoInventory(reciever.GetDecision(_round+2).getReward());
-
+                parseDescionID = reciever.GetDecision(_round).getDecisionID()+2;
                 break;
             case "A4":
                 storage.AddDecision(reciever.GetDecision(_round+3));
                 jumpto = reciever.GetDecision(_round+3).getdecisionCall();
                 inventory.AddtoInventory(reciever.GetDecision(_round+3).getReward());
+                parseDescionID = reciever.GetDecision(_round).getDecisionID()+3;
                 break;
         }
         _round = jumpto * 4 - 3; //! _round is set to jumpto, hence we're currently in the same family
         decisionLoader.LoadTextintoObject(jumpto);
+        decisionLoader.getParser(parseDescionID);
         inventory.Show();
     
     }
