@@ -1,7 +1,7 @@
 [
-  { "_ttextID": 1, "_ttextDescription": "Storay path 1.Sie können System.Enum in einer Basisklasseneinschränkung (die als enum-Einschränkung bezeichnet wird) verwenden, um anzugeben, dass ein Typparameter ein Enumerationstyp ist. Jeder Enumerationstyp erfüllt auch die struct-Einschränkung, die verwendet wird, um anzugeben, dass ein Typparameter ein Non-Nullable-Werttyp ist."},
+  { "_ttextID": 1, "_ttextDescription": "Test1."},
   { "_ttextID": 2, "_ttextDescription": "Storay path 2"},
-  { "_ttextID": 3, "_ttextDescription": "Sie können System.Enum in einer Basisklasseneinschränkung (die als enum-Einschränkung bezeichnet wird) verwenden, um anzugeben, dass ein Typparameter ein Enumerationstyp ist. Jeder Enumerationstyp erfüllt auch die struct-Einschränkung, die verwendet wird, um anzugeben, dass ein Typparameter ein Non-Nullable-Werttyp ist." },
+  { "_ttextID": 3, "_ttextDescription": "test3st." },
   { "_ttextID": 4, "_ttextDescription": "Storay path 4"},
   { "_ttextID": 5, "_ttextDescription": "Storay path 5"},
   { "_ttextID": 6, "_ttextDescription": "Storay path 6" },
