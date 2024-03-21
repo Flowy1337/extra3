@@ -15,11 +15,12 @@ public class Read_JSON : MonoBehaviour
         {
             //!Iterate through each json Objet in examples and create a corresponding Decision Object.
             //!Add Decision to reciever._allDecisions.
-            string requirment = example._requirment;
+            string requirment = example._requirement;
+            Debug.Log("Missing part is: " + requirment);
             AllItems _requirment = (AllItems)Enum.Parse(typeof(AllItems),requirment);
             string reward = example._reward;
             AllItems _reward = (AllItems)Enum.Parse(typeof(AllItems), reward);
-            Decision d = new Decision(example._decisionID, example._decisionDescription, example._decisionCall,
+            Decision d = new Decision(example._decisionID, example._decisionDescription,example._followText,example._timeoutVal,example._triggerOut,example._decisionCall,
                 example._decisionFamily,_requirment,_reward);
             Reciever.AddDecision(d);
           
@@ -32,10 +33,14 @@ public class Read_JSON : MonoBehaviour
         //!According member variables of the Decision Class
         public int _decisionID;
         public string _decisionDescription;
+        public string _followText;
+        public float _timeoutVal;
+        public bool _triggerOut;
         public int _decisionCall;
         public int _decisionFamily;
-        public string _requirment;
+        public string _requirement;
         public string _reward;
+        
 
     }
 

@@ -1,19 +1,25 @@
 ﻿[
-  { "_decisionID": 1, "_decisionDescription": "Go to the caves", "_decisionCall": 3, "_decisionFamily": 1,"_requirment": "Bag","_reward": "Password"},
-  { "_decisionID": 2, "_decisionDescription": "Drink from river", "_decisionCall": 2, "_decisionFamily": 1,"_requirment": "Bag","_reward": "Knife" },
-  { "_decisionID": 3, "_decisionDescription": "Jump over hill", "_decisionCall": 3, "_decisionFamily": 1,"_requirment": "Bag","_reward": "Knife" },
-  { "_decisionID": 4, "_decisionDescription": "Hide", "_decisionCall": 1, "_decisionFamily": 1, "_requirment": "Bag","_reward": "Knife"},
-  { "_decisionID": 5, "_decisionDescription": "Explore the forest", "_decisionCall": 1, "_decisionFamily": 2, "_requirment": "Bag","_reward": "Knife"},
-  { "_decisionID": 6, "_decisionDescription": "Climb a tree", "_decisionCall": 1, "_decisionFamily": 2, "_requirment": "Bag","_reward": "Knife"},
-  { "_decisionID": 7, "_decisionDescription": "Follow the path", "_decisionCall": 1, "_decisionFamily": 2, "_requirment": "Bag","_reward": "Knife"},
-  { "_decisionID": 8, "_decisionDescription": "Build a campfire", "_decisionCall": 1, "_decisionFamily": 2,"_requirment": "Bag","_reward": "Knife" },
-  { "_decisionID": 9, "_decisionDescription": "Swim across the lake", "_decisionCall": 1, "_decisionFamily": 3, "_requirment": "Bag","_reward": "Night_glasses"},
-  { "_decisionID": 10, "_decisionDescription": "Fish for dinner", "_decisionCall": 1, "_decisionFamily": 3, "_requirment": "Bag","_reward": "Knife"},
-  { "_decisionID": 11, "_decisionDescription": "Set up a tent", "_decisionCall": 1, "_decisionFamily": 3, "_requirment": "Bag","_reward": "Knife"},
-  { "_decisionID": 12, "_decisionDescription": "Search for wild berries", "_decisionCall": 1, "_decisionFamily": 3, "_requirment": "Bag","_reward": "Knife"},
-  { "_decisionID": 13, "_decisionDescription": "Follow a mysterious trail", "_decisionCall": 1, "_decisionFamily": 4, "_requirment": "Bag","_reward": "Knife"},
-  { "_decisionID": 14, "_decisionDescription": "Climb a mountain", "_decisionCall": 1, "_decisionFamily": 4,"_requirment": "Bag","_reward": "Knife" },
-  { "_decisionID": 15, "_decisionDescription": "Build a raft", "_decisionCall": 1, "_decisionFamily": 4, "_requirment": "Bag","_reward": "Knife"},
-  { "_decisionID": 16, "_decisionDescription": "Cross a narrow bridge", "_decisionCall": 1, "_decisionFamily": 4, "_requirment": "Bag","_reward": "Knife"}
+{ "_decisionID": 1, "_decisionDescription": "Hallo Annie!","_followText":"..Du bist doch Annie oder?","_timeoutVal": "0.5","_triggerOut": "false", "_decisionCall": 2, "_decisionFamily": 1, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 2, "_decisionDescription": "Hallo Mama, dies ist meine neue Nummer!","_followText": "Ich hab da ein Problem mit meinem Konto, kannst du mir helfen?","_timeoutVal":0.5,"_triggerOut":"false", "_decisionCall": 2, "_decisionFamily": 1, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 3, "_decisionDescription": "Hallo, du. Du heißt Annie, oder?","_followText":"","_timeoutVal": 0,"_triggerOut": "false", "_decisionCall": 2, "_decisionFamily": 1, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 4, "_decisionDescription": "Annie! Wie geht's dir, alte Socke?","_followText":"","_timeoutVal": 0,"_triggerOut": "false", "_decisionCall": 2, "_decisionFamily": 1, "_requirement": "Bag", "_reward": "Bag"},
 
+
+  { "_decisionID": 5, "_decisionDescription": "Jetzt noch? Es ist nach 20 Uhr!","_followText":"..Nenn mich doch...Blue. Wie dein Handy.","_timeoutVal": "0.5","_triggerOut": "false", "_decisionCall": 3, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
+  { "_decisionID": 6, "_decisionDescription": "Puh, du arbeitest aber ganz schön lange.","_followText":"..Nenn mich einfach mal Blue. Wie dein Handy.","_timeoutVal": "0.5","_triggerOut": "false","_decisionCall ": 3, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
+  { "_decisionID": 5, "_decisionDescription": "...","_followText":"..Du bist doch Annie oder?","_timeoutVal": "0.5","_triggerOut": "false", "_decisionCall": 7, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
+  { "_decisionID": 7, "_decisionDescription": "Nenn mich Blue. Wie Blueberry Phone.", "_followText":"..Du bist doch Annie oder?","_timeoutVal": "0.5","_triggerOut": "false","_decisionCall": 8, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
+  { "_decisionID": 8, "_decisionDescription": "Mein Name ist Blue.", "_followText":"..Du bist doch Annie oder?","_timeoutVal": "0.5","_triggerOut": "false","_decisionCall": 8, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
+
+  { "_decisionID": 9, "_decisionDescription": "Ich bin nicht sicher.","_followText":"..Du bist doch Annie oder?","_timeoutVal": "0.5","_triggerOut": "false", "_decisionCall": 4, "_decisionFamily": 3, "_requirement": "Bag", "_reward": "Bag"},
+  { "_decisionID": 10, "_decisionDescription": "Du bist in meinem Handy so eingespeichert.","_followText":"..Du bist doch Annie oder?","_timeoutVal": "0.5","_triggerOut": "false", "_decisionCall": 4, "_decisionFamily": 3, "_requirement": "Bag", "_reward": "Bag"},
+  { "_decisionID": 11, "_decisionDescription": "Gegenfrage. Warum bist du so spät noch in der Arbeit?","_followText":"..Du bist doch Annie oder?","_timeoutVal": "0.5","_triggerOut": "false", "_decisionCall": 5, "_decisionFamily": 3, "_requirement": "Bag", "_reward": "Flag_asked_for_worktime"},
+  { "_decisionID": 12, "_decisionDescription": "Gegenfrage. Warum bist du noch nicht zuhause?","_followText":"..Du bist doch Annie oder?","_timeoutVal": "0.5","_triggerOut": "false", "_decisionCall": 5, "_decisionFamily": 3, "_requirement": "Bag", "_reward": "Flag_asked_for_worktime"},
+
+  { "_decisionID": 13, "_decisionDescription": "Ich schätze, du wirst mir einfach vertrauen müssen.","_followText":"..Du bist doch Annie oder?","_timeoutVal": "0.5","_triggerOut": "false", "_decisionCall": 6, "_decisionFamily": 4, "_requirement": "Bag", "_reward": "Bag"},
+  { "_decisionID": 14, "_decisionDescription": "Du wirst sterben, wenn du nicht auf mich hörst.", "_followText":"..Du bist doch Annie oder?","_timeoutVal": "0.5","_triggerOut": "false","_decisionCall": 6, "_decisionFamily": 4, "_requirement": "Bag", "_reward": "Bag"},
+  { "_decisionID": 15, "_decisionDescription": "Such es dir aus. Vertrau mir oder lass es. ","_followText":"..Ich an deiner Stelle würde mir vertrauen.","_timeoutVal": "0.5","_triggerOut": "false", "_decisionCall": 6, "_decisionFamily": 4, "_requirement": "Bag", "_reward": "Bag"},
+  { "_decisionID": 16, "_decisionDescription": "Vertrau mir. Du stirbst sonst.","_followText":"..Du bist doch Annie oder?","_timeoutVal": "0.5","_triggerOut": "false", "_decisionCall": 6, "_decisionFamily": 4, "_requirement": "Bag", "_reward": "Bag"}
+
+  
 ]

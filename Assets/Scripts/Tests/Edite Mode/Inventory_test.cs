@@ -12,7 +12,7 @@ public class Inventory_test
     public void AddtoInventory_test()
     {
         
-        Inventory.AddtoInventory(AllItems.Knife);
+        Inventory.AddtoInventory(AllItems.Taschenlampe);
     }
 
     // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use

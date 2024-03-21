@@ -4,14 +4,14 @@ using NUnit.Framework;
 
 public class Decision_Test
 {
-    Decision d1 = new Decision(1, "Go to the cave", 1, 1,AllItems.Bag,AllItems.Knife);
-    Decision d2 = new Decision(2, "Drink from the river", 1, 1,AllItems.Bag,AllItems.Knife);
-    Decision d3 = new Decision(3, "Jump over the hill", 1, 1,AllItems.Bag,AllItems.Knife);
-    Decision d4 = new Decision(4, "Hide", 1, 1,AllItems.Bag,AllItems.Knife);
-    Decision d5 = new Decision(5, "Explore the forest", 1, 2,AllItems.Bag,AllItems.Knife);
-    Decision d6 = new Decision(6, "Climb a tree", 1, 2,AllItems.Bag,AllItems.Knife);
-    Decision d7 = new Decision(7, "Follow the path", 1, 2,AllItems.Bag,AllItems.Knife); 
-    Decision d8= new Decision(8, "Go home", 1, 2,AllItems.Bag,AllItems.Knife); 
+    Decision d1 = new Decision(1, "Go to the cave","nan",0,false, 1, 1,AllItems.Bag,AllItems.Bag);
+    Decision d2 = new Decision(2, "Drink from the river", "nan",0,false, 1, 1,AllItems.Bag,AllItems.Bag);
+    Decision d3 = new Decision(3, "Jump over the hill", "nan",0,false, 1, 1,AllItems.Bag,AllItems.Bag);
+    Decision d4 = new Decision(4, "Hide", "nan",0,false, 1, 1,AllItems.Bag,AllItems.Bag);
+    Decision d5 = new Decision(5, "Explore the forest", "nan",0,false, 1, 1,AllItems.Bag,AllItems.Bag);
+    Decision d6 = new Decision(6, "Climb a tree", "nan",0,false, 1, 1,AllItems.Bag,AllItems.Bag);
+    Decision d7 = new Decision(7, "Follow the path", "nan",0,false, 1, 1,AllItems.Bag,AllItems.Bag);
+    Decision d8= new Decision(8, "Go home", "nan",0,false, 1, 1,AllItems.Bag,AllItems.Bag);
     reciever reciever = reciever.Reciever;
     storage storage = storage.Storage;
 

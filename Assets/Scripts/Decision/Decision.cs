@@ -8,9 +8,12 @@ public class Decision
 {
     private int _decisionID; 
     private string _decisionDescription;
+    private string _followText;
+    private float _timeoutVal;
+    private bool _triggerOut;
     private int _decisionCall; 
     private int _decisionFamily;
-
+    
     private AllItems _requirment;
 
     private AllItems _reward;
@@ -19,11 +22,14 @@ public class Decision
     public string DecisionDescription { get { return _decisionDescription; } }
     public int DecisionCall { get { return _decisionCall; } }
     public int DecisionFamily { get { return _decisionFamily; } }
-    public Decision(int decisionID, string decisionDescription,int decisionCall,int decisionFamily,AllItems requirment,AllItems reward)
+    public Decision(int decisionID, string decisionDescription,string followText,float timeoutVal,bool triggerOut,int decisionCall,int decisionFamily,AllItems requirment,AllItems reward)
     {
         //!The Decision object stores all relevant information to identifie a decision
         this._decisionID = decisionID;
         this._decisionDescription = decisionDescription;
+        this._followText = followText;
+        this._timeoutVal = timeoutVal;
+        this._triggerOut = triggerOut;
         this._decisionCall = decisionCall;
         this._decisionFamily = decisionFamily;
         this._requirment = requirment;
