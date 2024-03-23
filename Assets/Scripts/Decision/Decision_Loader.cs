@@ -75,6 +75,7 @@ public class Decision_Loader : MonoBehaviour
 
     IEnumerator TypeText(string text, float delay,int to_call)
     {
+<<<<<<< HEAD
 
         if(parseDecisionID>0)
         {
@@ -91,6 +92,22 @@ public class Decision_Loader : MonoBehaviour
         Text.text += "\n";
 
 
+=======
+        
+        if(parseDecisionID>0)
+        {
+            Text.text += "<align=right><color=red>";
+            Text.text += reciever.GetDecision(parseDecisionID).getdecisionDescription(); 
+            Text.text += "</color></align>";
+        }
+        
+        
+        
+        Text.text += "\n";
+        Text.text += "\n";
+       
+       
+>>>>>>> 300c788187302a37a2785cfbea7c7e71fb5e7662
 
         bool lastCharDisplayed = false; // Flag to check if the last character is displayed
 
@@ -120,12 +137,21 @@ public class Decision_Loader : MonoBehaviour
 
         Text.text += "\n";
         Text.text += "\n";
+<<<<<<< HEAD
 
 
         Debug.Log( "HEIR ID "+parseDecisionID ) ;
      
 
 
+=======
+        
+        
+        Debug.Log( "HEIR ID "+parseDecisionID ) ;
+       
+       
+        
+>>>>>>> 300c788187302a37a2785cfbea7c7e71fb5e7662
 
         // Insert dashes after the last character is displayed
         if (lastCharDisplayed)
