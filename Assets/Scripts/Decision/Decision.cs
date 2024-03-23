@@ -61,5 +61,9 @@ public class Decision
     {
         return this._reward;
     }
-   
+
+    public string GetFollowText()
+    {
+        return this._followText;
+    }
 }

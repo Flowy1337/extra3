@@ -14,7 +14,7 @@ public class Decision_Loader : MonoBehaviour
     public TextMeshProUGUI Text;
     private bool skipTyping = false;
     private float defaultDelay = 0.1f; // Default delay value
-    private int parseDecisionID = 1;
+    private int parseDecisionID = 0;
 
     private void Start()
     {
@@ -75,8 +75,22 @@ public class Decision_Loader : MonoBehaviour
 
     IEnumerator TypeText(string text, float delay,int to_call)
     {
-        
-       
+
+        if(parseDecisionID>0)
+        {
+            Text.text += "<align=right><color=red>";
+            Text.text += reciever.GetDecision(parseDecisionID).getdecisionDescription();
+            Text.text += "\n";
+            Text.text += reciever.GetDecision(parseDecisionID).GetFollowText();
+            Text.text += "</color></align>";
+        }
+
+
+
+        Text.text += "\n";
+        Text.text += "\n";
+
+
 
         bool lastCharDisplayed = false; // Flag to check if the last character is displayed
 
@@ -89,13 +103,13 @@ public class Decision_Loader : MonoBehaviour
             if (i == text.Length - 1)
             {
                 lastCharDisplayed = true;
-                
+
             }
 
             // Check the variable to skip typing effect
             if (skipTyping)
             {
-                Text.text = text;
+                Text.text += text;
                 lastCharDisplayed = true; // Set the flag to true if skipping typing
                 skipTyping = false;
                 break;
@@ -106,11 +120,12 @@ public class Decision_Loader : MonoBehaviour
 
         Text.text += "\n";
         Text.text += "\n";
-        Text.text += "----------------------------------";
-        
+
+
         Debug.Log( "HEIR ID "+parseDecisionID ) ;
-        
-        Text.text += reciever.GetDecision(parseDecisionID).getdecisionDescription(); 
+     
+
+
 
         // Insert dashes after the last character is displayed
         if (lastCharDisplayed)
@@ -122,28 +137,24 @@ public class Decision_Loader : MonoBehaviour
     public void OnAnswer1Clicked()
     {
         // Implement your logic when answer 1 is clicked
-        Debug.Log("TESSSSSSSSSSST");
     }
 
     // Method to handle the click event of answer 2
     public void OnAnswer2Clicked()
     {
         // Implement your logic when answer 2 is clicked
-        Debug.Log("Answer 2 clicked");
     }
 
     // Method to handle the click event of answer 3
     public void OnAnswer3Clicked()
     {
         // Implement your logic when answer 3 is clicked
-        Debug.Log("Answer 3 clicked");
     }
 
     // Method to handle the click event of answer 4
     public void OnAnswer4Clicked()
     {
         // Implement your logic when answer 4 is clicked
-        Debug.Log("Answer 4 clicked");
     }
 
 }

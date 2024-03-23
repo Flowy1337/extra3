@@ -5,7 +5,7 @@
 { "_decisionID": 4, "_decisionDescription": "Annie! Wie geht's dir, alte Socke?","_followText":"","_timeoutVal": 0,"_triggerOut": "false", "_decisionCall": 2, "_decisionFamily": 1, "_requirement": "Bag", "_reward": "Bag"},
 
 
-  { "_decisionID": 5, "_decisionDescription": "Jetzt noch? Es ist nach 20 Uhr!","_followText":"..Nenn mich doch...Blue. Wie dein Handy.","_timeoutVal": "0.5","_triggerOut": "false", "_decisionCall": 3, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
+  { "_decisionID": 5, "_decisionDescription": "Jetzt noch? Es ist nach 20 Uhr!","_followText":"..Nenn mich doch...Blue. Wie dein Handy.","_timeoutVal": "0.5","_triggerOut": "false", "_decisionCall": 1, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
   { "_decisionID": 6, "_decisionDescription": "Puh, du arbeitest aber ganz schön lange.","_followText":"..Nenn mich einfach mal Blue. Wie dein Handy.","_timeoutVal": "0.5","_triggerOut": "false","_decisionCall ": 3, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
   { "_decisionID": 5, "_decisionDescription": "...","_followText":"..Du bist doch Annie oder?","_timeoutVal": "0.5","_triggerOut": "false", "_decisionCall": 7, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
   { "_decisionID": 7, "_decisionDescription": "Nenn mich Blue. Wie Blueberry Phone.", "_followText":"..Du bist doch Annie oder?","_timeoutVal": "0.5","_triggerOut": "false","_decisionCall": 8, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},

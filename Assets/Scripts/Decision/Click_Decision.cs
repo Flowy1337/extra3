@@ -12,7 +12,7 @@ public class Click_Decision : MonoBehaviour
     public Decision_Loader decisionLoader;
     private static int jumpto = 1;
     Inventory inventory = Inventory.inventory;
-    public int parseDescionID=1;
+    public int parseDescionID=0;
     void Start()
     {
         reciever = reciever.Reciever;
@@ -69,8 +69,9 @@ public class Click_Decision : MonoBehaviour
                 break;
         }
         _round = jumpto * 4 - 3; //! _round is set to jumpto, hence we're currently in the same family
-        decisionLoader.LoadTextintoObject(jumpto);
         decisionLoader.getParser(parseDescionID);
+        decisionLoader.LoadTextintoObject(jumpto);
+       
         inventory.Show();
     
     }
