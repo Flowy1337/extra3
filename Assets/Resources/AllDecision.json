@@ -1,25 +1,132 @@
 ﻿[
-{ "_decisionID": 1, "_decisionDescription": "Hallo Annie!","_followText":"..Du bist doch Annie oder?","_timeoutVal": "0.5","_triggerOut": "false", "_decisionCall": 2, "_decisionFamily": 1, "_requirement": "Bag", "_reward": "Bag"},
-{ "_decisionID": 2, "_decisionDescription": "Hallo Mama, dies ist meine neue Nummer!","_followText": "Ich hab da ein Problem mit meinem Konto, kannst du mir helfen?","_timeoutVal":0.5,"_triggerOut":"false", "_decisionCall": 2, "_decisionFamily": 1, "_requirement": "Bag", "_reward": "Bag"},
-{ "_decisionID": 3, "_decisionDescription": "Hallo, du. Du heißt Annie, oder?","_followText":"","_timeoutVal": 0,"_triggerOut": "false", "_decisionCall": 2, "_decisionFamily": 1, "_requirement": "Bag", "_reward": "Bag"},
-{ "_decisionID": 4, "_decisionDescription": "Annie! Wie geht's dir, alte Socke?","_followText":"","_timeoutVal": 0,"_triggerOut": "false", "_decisionCall": 2, "_decisionFamily": 1, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 1, "_decisionDescription": "Hallo Annie!","_followText":"Test ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 2, "_decisionFamily": 1, "_requirement": "Bag", "_reward": "Flag_asked_for_worktime"},
+{ "_decisionID": 2, "_decisionDescription": "Hallo Mama, dies ist meine neue Nummer! Ich hab da ein Problem mit meinem Konto, kannst du mir helfen?", "_followText":" ","_timeoutVal":"0","_triggerOut":"1", "_decisionCall": 2, "_decisionFamily": 1, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 3, "_decisionDescription": "Hallo, du. Du heißt Annie, oder?", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 2, "_decisionFamily": 1, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 4, "_decisionDescription": "Annie! Wie geht's dir, alte Socke?", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 2, "_decisionFamily": 1, "_requirement": "Bag", "_reward": "Bag"},
 
+{ "_decisionID": 5, "_decisionDescription": "Jetzt noch? Es ist nach 20 Uhr!", "_followText":"Nenn mich doch...Blue. Wie dein Handy.","_timeoutVal":"10","_triggerOut":"0", "_decisionCall": 3, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 6, "_decisionDescription": "Puh, du arbeitest aber ganz schön lange.", "_followText":"Nenn mich einfach mal Blue. Wie dein Handy.","_timeoutVal":"10","_triggerOut":"0", "_decisionCall": 3, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 7, "_decisionDescription": "Nenn mich Blue. Wie Blueberry Phone.", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 8, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 8, "_decisionDescription": "Mein Name ist Blue.",  "_followText":" ","_timeoutVal":"0","_triggerOut":"0","_decisionCall": 8, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
 
-  { "_decisionID": 5, "_decisionDescription": "Jetzt noch? Es ist nach 20 Uhr!","_followText":"..Nenn mich doch...Blue. Wie dein Handy.","_timeoutVal": "0.5","_triggerOut": "false", "_decisionCall": 1, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
-  { "_decisionID": 6, "_decisionDescription": "Puh, du arbeitest aber ganz schön lange.","_followText":"..Nenn mich einfach mal Blue. Wie dein Handy.","_timeoutVal": "0.5","_triggerOut": "false","_decisionCall ": 3, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
-  { "_decisionID": 5, "_decisionDescription": "...","_followText":"..Du bist doch Annie oder?","_timeoutVal": "0.5","_triggerOut": "false", "_decisionCall": 7, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
-  { "_decisionID": 7, "_decisionDescription": "Nenn mich Blue. Wie Blueberry Phone.", "_followText":"..Du bist doch Annie oder?","_timeoutVal": "0.5","_triggerOut": "false","_decisionCall": 8, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
-  { "_decisionID": 8, "_decisionDescription": "Mein Name ist Blue.", "_followText":"..Du bist doch Annie oder?","_timeoutVal": "0.5","_triggerOut": "false","_decisionCall": 8, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 9, "_decisionDescription": "Ich bin nicht sicher.", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 4, "_decisionFamily": 3, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 10, "_decisionDescription": "Du bist in meinem Handy so eingespeichert.", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 4, "_decisionFamily": 3, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 11, "_decisionDescription": "Gegenfrage. Warum bist du so spät noch in der Arbeit?", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 5, "_decisionFamily": 3, "_requirement": "Bag", "_reward": "Flag_asked_for_worktime"},
+{ "_decisionID": 12, "_decisionDescription": "Gegenfrage. Warum bist du noch nicht zuhause?", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 5, "_decisionFamily": 3, "_requirement": "Bag", "_reward": "Flag_asked_for_worktime"},
 
-  { "_decisionID": 9, "_decisionDescription": "Ich bin nicht sicher.","_followText":"..Du bist doch Annie oder?","_timeoutVal": "0.5","_triggerOut": "false", "_decisionCall": 4, "_decisionFamily": 3, "_requirement": "Bag", "_reward": "Bag"},
-  { "_decisionID": 10, "_decisionDescription": "Du bist in meinem Handy so eingespeichert.","_followText":"..Du bist doch Annie oder?","_timeoutVal": "0.5","_triggerOut": "false", "_decisionCall": 4, "_decisionFamily": 3, "_requirement": "Bag", "_reward": "Bag"},
-  { "_decisionID": 11, "_decisionDescription": "Gegenfrage. Warum bist du so spät noch in der Arbeit?","_followText":"..Du bist doch Annie oder?","_timeoutVal": "0.5","_triggerOut": "false", "_decisionCall": 5, "_decisionFamily": 3, "_requirement": "Bag", "_reward": "Flag_asked_for_worktime"},
-  { "_decisionID": 12, "_decisionDescription": "Gegenfrage. Warum bist du noch nicht zuhause?","_followText":"..Du bist doch Annie oder?","_timeoutVal": "0.5","_triggerOut": "false", "_decisionCall": 5, "_decisionFamily": 3, "_requirement": "Bag", "_reward": "Flag_asked_for_worktime"},
+{ "_decisionID": 13, "_decisionDescription": "Ich schätze, du wirst mir einfach vertrauen müssen.", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 6, "_decisionFamily": 4, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 14, "_decisionDescription": "Du wirst sterben, wenn du nicht auf mich hörst.", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 6, "_decisionFamily": 4, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 15, "_decisionDescription": "Such es dir aus. Vertrau mir oder lass es.", "_followText":"Ich an deiner Stelle würde mir vertrauen. ","_timeoutVal":"10","_triggerOut":"0", "_decisionCall": 6, "_decisionFamily": 4, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 16, "_decisionDescription": "Vertrau mir. Du stirbst sonst.", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 6, "_decisionFamily": 4, "_requirement": "Bag", "_reward": "Bag"},
 
-  { "_decisionID": 13, "_decisionDescription": "Ich schätze, du wirst mir einfach vertrauen müssen.","_followText":"..Du bist doch Annie oder?","_timeoutVal": "0.5","_triggerOut": "false", "_decisionCall": 6, "_decisionFamily": 4, "_requirement": "Bag", "_reward": "Bag"},
-  { "_decisionID": 14, "_decisionDescription": "Du wirst sterben, wenn du nicht auf mich hörst.", "_followText":"..Du bist doch Annie oder?","_timeoutVal": "0.5","_triggerOut": "false","_decisionCall": 6, "_decisionFamily": 4, "_requirement": "Bag", "_reward": "Bag"},
-  { "_decisionID": 15, "_decisionDescription": "Such es dir aus. Vertrau mir oder lass es. ","_followText":"..Ich an deiner Stelle würde mir vertrauen.","_timeoutVal": "0.5","_triggerOut": "false", "_decisionCall": 6, "_decisionFamily": 4, "_requirement": "Bag", "_reward": "Bag"},
-  { "_decisionID": 16, "_decisionDescription": "Vertrau mir. Du stirbst sonst.","_followText":"..Du bist doch Annie oder?","_timeoutVal": "0.5","_triggerOut": "false", "_decisionCall": 6, "_decisionFamily": 4, "_requirement": "Bag", "_reward": "Bag"}
+{ "_decisionID": 17, "_decisionDescription": "Ich bin nicht sicher.", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 4, "_decisionFamily": 5, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 18, "_decisionDescription": "Du bist in meinem Handy so eingespeichert.", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 4, "_decisionFamily": 5, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 19, "_decisionDescription": "Keine Ahnung.", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 4, "_decisionFamily": 5, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 20, "_decisionDescription": " ", "_decisionCall": 4, "_decisionFamily": 5, "_requirement": "Block", "_reward": "Bag"},
 
-  
+{ "_decisionID": 21, "_decisionDescription": "Was ja dagegen spricht, dass ich dich scammen will.", "_followText":"Dann würde ich das mit dem Vertrauen erwecken nämlich besser machen. Deine Kontodaten darfst du mir natürlich trotzdem geben, wenn du möchtest.","_timeoutVal":"15","_triggerOut":"0", "_decisionCall": 7, "_decisionFamily": 6, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 22, "_decisionDescription": "Nein, im ernst.", "_followText":"Ich will dir helfen. Du wirst sonst nicht überleben... Mehr weiß ich leider auch nicht.","_timeoutVal":"10","_triggerOut":"0", "_decisionCall": 8, "_decisionFamily": 6, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 23, "_decisionDescription": "Bitte. Ich meine es nur gut.", "_followText":"Ich habe wirklich Angst um dich.","_timeoutVal":"10","_triggerOut":"0", "_decisionCall": 8, "_decisionFamily": 6, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 24, "_decisionDescription": "Vielleicht möchte ich ja genau das denken lassen!", "_followText":"Reverse Psychology! Muahahaha!","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 7, "_decisionFamily": 6, "_requirement": "Bag", "_reward": "Bag"},
+
+{ "_decisionID": 25, "_decisionDescription": "Spaß beiseite.", "_followText":"Ich will dir helfen. Du wirst sonst nicht überleben.","_timeoutVal":"10","_triggerOut":"0", "_decisionCall": 8, "_decisionFamily": 7, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 26, "_decisionDescription": "Nein, wirklich jetzt.", "_followText":"Ich will dir helfen. Du wirst sonst nicht überleben.","_timeoutVal":"10","_triggerOut":"0", "_decisionCall": 8, "_decisionFamily": 7, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 27, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 8, "_decisionFamily": 7, "_requirement": "Block", "_reward": "Bag"},
+{ "_decisionID": 28, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 8, "_decisionFamily": 7, "_requirement": "Block", "_reward": "Bag"},
+
+{ "_decisionID": 29, "_decisionDescription": "Ja, also...", "_followText":"Gute Frage. Ehrlich gesagt, keine Ahnung. Vielleicht können wir uns gegenseitig helfen - Du willst sicher selbst auch nicht sterben.","_timeoutVal":"10","_triggerOut":"0", "_decisionCall": 9, "_decisionFamily": 8, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 30, "_decisionDescription": "Ich bin qualifierter Lebensretter!", "_followText":"Nein, gute Frage. Ehrlich gesagt, keine Ahnung. Vielleicht können wir uns gegenseitig helfen - Du willst sicher selbst auch nicht sterben.","_timeoutVal":"10","_triggerOut":"0", "_decisionCall": 9, "_decisionFamily": 8, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 31, "_decisionDescription": "Wie kannst du es wagen, meine Fähigkeiten anzuzweifeln?? ", "_followText":"Nein, also, gute Frage. Ehrlich gesagt, keine Ahnung. Vielleicht können wir uns gegenseitig helfen - Du willst sicher selbst auch nicht sterben.","_timeoutVal":"10","_triggerOut":"0", "_decisionCall": 9, "_decisionFamily": 8, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 32, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 9, "_decisionFamily": 8, "_requirement": "Block", "_reward": "Bag"},
+
+{ "_decisionID": 33, "_decisionDescription": "Ich...weiß? ", "_followText":"Ich habe auch gerade eine Benachrichtigung über diese Mail bekommen.","_timeoutVal":"10","_triggerOut":"0", "_decisionCall": 10, "_decisionFamily": 9, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 34, "_decisionDescription": "Hab ich gesehen.", "_followText":"Ich habe auch gerade eine Benachrichtigung über diese Mail bekommen. ","_timeoutVal":"10","_triggerOut":"0", "_decisionCall": 10, "_decisionFamily": 9, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 35, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 10, "_decisionFamily": 9, "_requirement": "Block", "_reward": "Bag"},
+{ "_decisionID": 36, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 10, "_decisionFamily": 9, "_requirement": "Block", "_reward": "Bag"},
+
+{ "_decisionID": 37, "_decisionDescription": "ANNIE.", "_followText":"Denk da mal einen Augenblick drüber nach. Wenn das so wäre, würde ich dir doch nicht SAGEN, dass ich die Mail auch sehen kann.","_timeoutVal":"10","_triggerOut":"0", "_decisionCall": 11, "_decisionFamily": 10, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 38, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 11, "_decisionFamily": 10, "_requirement": "Block", "_reward": "Bag"},
+{ "_decisionID": 39, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 11, "_decisionFamily": 10, "_requirement": "Block", "_reward": "Bag"},
+{ "_decisionID": 40, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 11, "_decisionFamily": 10, "_requirement": "Block", "_reward": "Bag"},
+
+{ "_decisionID": 41, "_decisionDescription": "Mich verwirrt das mindestens so sehr wie dich.", "_followText":"Ähm...deine Notizen kann ich auch sehen.","_timeoutVal":"50","_triggerOut":"1", "_decisionCall": 12, "_decisionFamily": 11, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 42, "_decisionDescription": "Ich habe keine Ahnung.", "_followText":"Ähm...deine Notizen kann ich auch sehen.","_timeoutVal":"50","_triggerOut":"1", "_decisionCall": 12, "_decisionFamily": 11, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 43, "_decisionDescription": "Ja. Ich bin...verwirrt.", "_followText":"Ähm...deine Notizen kann ich auch sehen. ","_timeoutVal":"50","_triggerOut":"1", "_decisionCall": 12, "_decisionFamily": 11, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 44, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 12, "_decisionFamily": 11, "_requirement": "Block", "_reward": "Bag"},
+
+{ "_decisionID": 45, "_decisionDescription": "Nun, das ist jetzt wirklich lächerlich, Annie.", "_followText":"Wir scheinen uns einen Speicher zu teilen oder sowas. Keine Ahnung, ob oder wie das geht. Ich bin kein ITler (glaube ich?)","_timeoutVal":"10","_triggerOut":"0", "_decisionCall": 13, "_decisionFamily": 12, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 46, "_decisionDescription": "Ach, komm schon. ", "_followText":"Wir scheinen uns einen Speicher zu teilen oder sowas. Keine Ahnung, ob oder wie das geht. Ich bin kein ITler (glaube ich?)","_timeoutVal":"10","_triggerOut":"0", "_decisionCall": 13, "_decisionFamily": 12, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 47, "_decisionDescription": "Ahhh ja. 'türlich.", "_followText":"Wir scheinen uns einen Speicher zu teilen oder sowas. Keine Ahnung, ob oder wie das geht. Ich bin kein ITler (glaube ich?)","_timeoutVal":"10","_triggerOut":"0", "_decisionCall": 13, "_decisionFamily": 12, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 48, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 13, "_decisionFamily": 12, "_requirement": "Bag", "_reward": "Bag"},
+
+{ "_decisionID": 49, "_decisionDescription": "Aha! Ja, siehst du? Ich sag doch, dass was passieren wird!", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 14, "_decisionFamily": 13, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 50, "_decisionDescription": "Also hatte ich doch recht!", "_followText":"Etwas passiert!","_timeoutVal":"10","_triggerOut":"0", "_decisionCall": 14, "_decisionFamily": 13, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 51, "_decisionDescription": "Okay? Vielleicht ein Probealarm?", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 14, "_decisionFamily": 13, "_requirement": "Bag", "_reward": "flag_testalarm"},
+{ "_decisionID": 52, "_decisionDescription": "Könnte das ein Probealarm sein?", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 14, "_decisionFamily": 13, "_requirement": "Bag", "_reward": "flag_testalarm"},
+
+{ "_decisionID": 53, "_decisionDescription": "Geh auf dem schnellsten Weg nach draußen!", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 19, "_decisionFamily": 14, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 54, "_decisionDescription": "Danke, geht doch!", "_followText":"Nichts wie raus da!","_timeoutVal":"10","_triggerOut":"0", "_decisionCall": 19, "_decisionFamily": 14, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 55, "_decisionDescription": "Schau am besten, wie du da jetzt raus kommst.", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 19, "_decisionFamily": 14, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 56, "_decisionDescription": "Ruhig und geordnet nach draußen begeben...bitte bildet Zweierreihen!", "_followText":"Ach ne, ist ja keine Schule.","_timeoutVal":"10","_triggerOut":"0", "_decisionCall": 19, "_decisionFamily": 14, "_requirement": "Bag", "_reward": "Bag"},
+
+{ "_decisionID": 57, "_decisionDescription": "Aha! Ja, siehst du? Ich sag doch, dass was passieren wird!", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 17, "_decisionFamily": 15, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 58, "_decisionDescription": "Ich habe es ja geahnt...", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 17, "_decisionFamily": 15, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 59, "_decisionDescription": "Ich hatte ja eigentlich gehofft, dass ich Unrecht habe.", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 17, "_decisionFamily": 15, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 60, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 17, "_decisionFamily": 15, "_requirement": "Bag", "_reward": "Bag"},
+
+{ "_decisionID": 61, "_decisionDescription": "Ob Probealarm oder nicht - du solltest aus dem Gebäude raus.", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 17, "_decisionFamily": 16, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 62, "_decisionDescription": "Sicher ist sicher. ", "_followText":"Geh lieber raus.","_timeoutVal":"10","_triggerOut":"0", "_decisionCall": 17, "_decisionFamily": 16, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 63, "_decisionDescription": "Und wenn der Alarm doch echt ist...? Lieber raus da!", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 17, "_decisionFamily": 16, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 64, "_decisionDescription": "Bleib lieber auf der sicheren Seite: die ist draußen!", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 17, "_decisionFamily": 16, "_requirement": "Bag", "_reward": "Bag"},
+
+{ "_decisionID": 65, "_decisionDescription": "Dann wohl kein Probealarm! Nichts wie raus da!", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 18, "_decisionFamily": 17, "_requirement": "flag_testalarm", "_reward": "Bag"},
+{ "_decisionID": 66, "_decisionDescription": "Nichts wie raus da!", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 18, "_decisionFamily": 17, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 67, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 18, "_decisionFamily": 17, "_requirement": "Block", "_reward": "Bag"},
+{ "_decisionID": 68, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 18, "_decisionFamily": 17, "_requirement": "Block", "_reward": "Bag"},
+
+{ "_decisionID": 69, "_decisionDescription": "Hast du eine Taschenlampe? Oder wenigstens ein Feuerzeug?", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 19, "_decisionFamily": 18, "_requirement": "Bag", "_reward": "Feuerzeug"},
+{ "_decisionID": 70, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 19, "_decisionFamily": 18, "_requirement": "Block", "_reward": "Feuerzeug"},
+{ "_decisionID": 71, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 19, "_decisionFamily": 18, "_requirement": "Block", "_reward": "Feuerzeug"},
+{ "_decisionID": 72, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 19, "_decisionFamily": 18, "_requirement": "Block", "_reward": "Feuerzeug"},
+
+{ "_decisionID": 73, "_decisionDescription": "Immerhin etwas. Damit solltest du wenigstens den Weg zum nächsten Lichtschalter finden.", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 20, "_decisionFamily": 19, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 74, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 20, "_decisionFamily": 19, "_requirement": "Block", "_reward": "Bag"},
+{ "_decisionID": 75, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 20, "_decisionFamily": 19, "_requirement": "Block", "_reward": "Bag"},
+{ "_decisionID": 76, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 20, "_decisionFamily": 19, "_requirement": "Block", "_reward": "Bag"},
+
+{ "_decisionID": 77, "_decisionDescription": "Dann wäre der Alarm aber auch aus. Vielleicht ist nur einfach die Lampe durchgebrannt.", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 21, "_decisionFamily": 20, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 78, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 21, "_decisionFamily": 20, "_requirement": "Block", "_reward": "Bag"},
+{ "_decisionID": 79, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 21, "_decisionFamily": 20, "_requirement": "Block", "_reward": "Bag"},
+{ "_decisionID": 80, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 21, "_decisionFamily": 20, "_requirement": "Block", "_reward": "Bag"},
+
+{ "_decisionID": 81, "_decisionDescription": "'Es ist zu dunkel, ich kann dich nicht hören', oder was?", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 22, "_decisionFamily": 21, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 82, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 22, "_decisionFamily": 21, "_requirement": "Block", "_reward": "Bag"},
+{ "_decisionID": 83, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 22, "_decisionFamily": 21, "_requirement": "Block", "_reward": "Bag"},
+{ "_decisionID": 84, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 22, "_decisionFamily": 21, "_requirement": "Block", "_reward": "Bag"},
+
+{ "_decisionID": 85, "_decisionDescription": "Also doch Stromausfall. Schaffst du es mit dem Licht des Feuerzeugs nach draußen?", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 23, "_decisionFamily": 22, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 86, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 23, "_decisionFamily": 22, "_requirement": "Block", "_reward": "Bag"},
+{ "_decisionID": 87, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 23, "_decisionFamily": 22, "_requirement": "Block", "_reward": "Bag"},
+{ "_decisionID": 88, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 23, "_decisionFamily": 22, "_requirement": "Block", "_reward": "Bag"},
+
+{ "_decisionID": 89, "_decisionDescription": "Habt ihr keine Notbeleuchtung bei Stromausfall?", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 24, "_decisionFamily": 23, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 90, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 24, "_decisionFamily": 23, "_requirement": "Block", "_reward": "Bag"},
+{ "_decisionID": 91, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 24, "_decisionFamily": 23, "_requirement": "Block", "_reward": "Bag"},
+{ "_decisionID": 92, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 24, "_decisionFamily": 23, "_requirement": "Block", "_reward": "Bag"},
+
+{ "_decisionID": 93, "_decisionDescription": "Na ganz klasse. ", "_followText":"Hat einer deiner Kollegen vielleicht etwas in seinem Schreibtisch, mit dem du mehr Licht machen kannst?","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 25, "_decisionFamily": 24, "_requirement": "Bag", "_reward": "Taschenlampe"},
+{ "_decisionID": 94, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 25, "_decisionFamily": 24, "_requirement": "Block", "_reward": "Taschenlampe"},
+{ "_decisionID": 95, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 25, "_decisionFamily": 24, "_requirement": "Block", "_reward": "Taschenlampe"},
+{ "_decisionID": 96, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 25, "_decisionFamily": 24, "_requirement": "Block", "_reward": "Taschenlampe"},
+
+{ "_decisionID": 97, "_decisionDescription": "Sehr gut!", "_followText":"Ich hab eine Idee. Wir teilen uns ja - warum auch immer - einen Handyspeicher. Schreib doch in deine Notizen rein, was du bei dir trägst. Dann weiß ich immer, was du dabei hast und kann dir besser helfen. ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 26, "_decisionFamily": 25, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 98, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 26, "_decisionFamily": 25, "_requirement": "Block", "_reward": "Bag"},
+{ "_decisionID": 99, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 26, "_decisionFamily": 25, "_requirement": "Block", "_reward": "Bag"},
+{ "_decisionID": 100, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 26, "_decisionFamily": 25, "_requirement": "Block", "_reward": "Bag"},
+
+{ "_decisionID": 101, "_decisionDescription": "Gut, na dann nichts wie raus da!", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 27, "_decisionFamily": 26, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 102, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 27, "_decisionFamily": 26, "_requirement": "Block", "_reward": "Bag"},
+{ "_decisionID": 103, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 27, "_decisionFamily": 26, "_requirement": "Block", "_reward": "Bag"},
+{ "_decisionID": 104, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 27, "_decisionFamily": 26, "_requirement": "Block", "_reward": "Bag"}
 ]
+

@@ -37,6 +37,7 @@ public class Map_test
     public void append_text_while_active()
     {
         h1.open_item();
+        h1.DeleteTextHistory();
         string ans = "IAP rocks :)";
         h1.insert_text(ans);
         Assert.AreEqual(h1.return_textHistory(),ans);

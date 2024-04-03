@@ -69,9 +69,9 @@ public class Click_Decision : MonoBehaviour
                 break;
         }
         _round = jumpto * 4 - 3; //! _round is set to jumpto, hence we're currently in the same family
+        Debug.Log(_round);
         decisionLoader.getParser(parseDescionID);
         decisionLoader.LoadTextintoObject(jumpto);
-       
         inventory.Show();
     
     }

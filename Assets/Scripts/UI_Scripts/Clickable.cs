@@ -1,30 +1,28 @@
+using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MouseHoverCheck : MonoBehaviour
 {
-    storage storage = storage.Storage;
     private Vector3 originalScale;
-    bool sizeUp = false;
+    bool sizeUp;
     public float scaleFactor = 1.2f;
-    public TextMeshProUGUI txt;
-    private bool selected = false;
-    private Handy handy = Handy.Instanz;
-    private GameObject notePad;
-    public SpriteRenderer sptr;
+    public GameObject imageHolder;
+    public string description;
+    public TextMeshProUGUI displaytext;
     void Start()
     {
         originalScale = transform.localScale;
-        notePad = GameObject.FindGameObjectWithTag("Notepad");
+       
 
     }
+    
+    
 
-    public bool foo()
-    {
-        handy.open_item();
-        return this.handy.Active();
-    }
+ 
     void OnMouseOver()
     {
         if (!sizeUp)
@@ -34,23 +32,7 @@ public class MouseHoverCheck : MonoBehaviour
             sizeUp = true;
         }
 
-        if (Input.GetMouseButtonDown(0)){
-            if (txt.enabled)
-            {
-                foo();
-                txt.enabled = false;
-                sptr = notePad.GetComponent<SpriteRenderer>();
-                sptr.enabled = false;
-            }
-            else
-            {
-                handy.close_item();
-                handy.insert_text(txt.text);
-                sptr.enabled = true;
-
-                txt.enabled = true;
-            }
-        }
+     
     }
 
    
@@ -60,4 +42,18 @@ public class MouseHoverCheck : MonoBehaviour
         transform.localScale = originalScale;
         sizeUp = false;
     }
+
+    private void OnMouseDown()
+    {
+        if (gameObject.GetComponent<Image>().material.GetFloat("_GrayscaleAmount").Equals(0))
+        {
+            
+            Image image = gameObject.GetComponent<Image>();
+            imageHolder.GetComponent<Image>().sprite = image.sprite;
+            displaytext.text = description;
+        }
+        
+    }
+    
+   
 }

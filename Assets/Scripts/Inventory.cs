@@ -38,4 +38,14 @@ public class Inventory
         this.current_items = current_items | x;
     }
 
+    public bool contains(AllItems item)
+    {
+        if((current_items & item) == item)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
 }
