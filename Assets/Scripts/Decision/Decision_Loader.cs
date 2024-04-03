@@ -1,11 +1,16 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Decision_Loader : MonoBehaviour
 {
     private readonly reciever reciever = reciever.Reciever;
     private readonly TextReciever textReciever = TextReciever.textReciever;
+    
+
+    
+    public Click_Decision clickDecision;
     public TextMeshProUGUI ans1;
     public TextMeshProUGUI ans2;
     public TextMeshProUGUI ans3;
@@ -14,8 +19,11 @@ public class Decision_Loader : MonoBehaviour
     private bool skipTyping = false;
     private float defaultDelay = 0.1f; // Default delay value
     private int parseDecisionID = 0;
-
-    private void Start()
+    private bool triggerOut = false;
+    public PictureDisplay pictureDisplay;
+    private int index;
+    
+    private void Start()    
     {
         LoadTextintoObject(1);
     }
@@ -34,6 +42,7 @@ public class Decision_Loader : MonoBehaviour
         ans2.text = reciever.GetDecision(start + 1).getdecisionDescription();
         ans3.text = reciever.GetDecision(start + 2).getdecisionDescription();
         ans4.text = reciever.GetDecision(start + 3).getdecisionDescription();
+        index = start;
     }
 
     public void LoadTextintoObject(int to_call)
@@ -67,13 +76,30 @@ public class Decision_Loader : MonoBehaviour
          
     }
 
+    
+
     public void  getParser(int parseDecisionID)
     {
         this.parseDecisionID = parseDecisionID;
     }
 
+    public void getTriggerOut(bool TriggerOut)
+    {
+        this.triggerOut = TriggerOut;
+        
+    }
+
     IEnumerator TypeText(string text, float delay,int to_call)
     {
+
+        if (triggerOut )
+        {
+            pictureDisplay.DisplayPicture(index);
+            
+        }
+        
+        
+        
 
         if(parseDecisionID>0)
         {
@@ -90,14 +116,6 @@ public class Decision_Loader : MonoBehaviour
         Text.text += "\n";
 
 
-        
-       
-        
-        
-        
-       
-       
-       
 
         bool lastCharDisplayed = false; // Flag to check if the last character is displayed
 
@@ -127,18 +145,12 @@ public class Decision_Loader : MonoBehaviour
 
         Text.text += "\n";
         Text.text += "\n";
-
-
-        Debug.Log( "HEIR ID "+parseDecisionID ) ;
      
 
+        Debug.Log( "HEIR ID "+triggerOut ) ;
+        
 
-        
-        
-        Debug.Log( "HEIR ID "+parseDecisionID ) ;
-       
-       
-        
+
 
         // Insert dashes after the last character is displayed
         if (lastCharDisplayed)

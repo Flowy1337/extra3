@@ -42,6 +42,10 @@ public class Decision
         //! returns the decisionID as a int
         return this._decisionID;
     } 
+    public bool  getTriggerOut()
+    {
+        return this._triggerOut;
+    }
 
     public string getdecisionDescription()
     {

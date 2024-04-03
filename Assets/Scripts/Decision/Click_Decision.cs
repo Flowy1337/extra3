@@ -1,4 +1,5 @@
 
+using Codice.Client.BaseCommands;
 using UnityEngine;
 //Reciever is a singleton, by using load_decision we can load all the decision of a given typ
 //Since our gameobjects all have a unique name wen can use this script for the action handling
@@ -13,6 +14,7 @@ public class Click_Decision : MonoBehaviour
     private static int jumpto = 1;
     Inventory inventory = Inventory.inventory;
     public int parseDescionID=0;
+    public bool Trigger = false;
     void Start()
     {
         reciever = reciever.Reciever;
@@ -44,6 +46,7 @@ public class Click_Decision : MonoBehaviour
                 jumpto = reciever.GetDecision(_round).getdecisionCall();
                 inventory.AddtoInventory(reciever.GetDecision(_round).getReward());
                 parseDescionID = reciever.GetDecision(_round).getDecisionID();
+                Trigger = reciever.GetDecision(_round).getTriggerOut();
 
                 break;
             case "A2":
@@ -53,6 +56,7 @@ public class Click_Decision : MonoBehaviour
                 inventory.AddtoInventory(reciever.GetDecision(_round+1).getReward());
                 parseDescionID = reciever.GetDecision(_round).getDecisionID()+1;
                 Debug.Log("2 Antwort" + parseDescionID);
+                Trigger = reciever.GetDecision(_round).getTriggerOut();
 
                 break;
             case "A3":
@@ -60,17 +64,20 @@ public class Click_Decision : MonoBehaviour
                 jumpto = reciever.GetDecision(_round+2).getdecisionCall();
                 inventory.AddtoInventory(reciever.GetDecision(_round+2).getReward());
                 parseDescionID = reciever.GetDecision(_round).getDecisionID()+2;
+                Trigger = reciever.GetDecision(_round).getTriggerOut();
                 break;
             case "A4":
                 storage.AddDecision(reciever.GetDecision(_round+3));
                 jumpto = reciever.GetDecision(_round+3).getdecisionCall();
                 inventory.AddtoInventory(reciever.GetDecision(_round+3).getReward());
                 parseDescionID = reciever.GetDecision(_round).getDecisionID()+3;
+                Trigger = reciever.GetDecision(_round).getTriggerOut();
                 break;
         }
         _round = jumpto * 4 - 3; //! _round is set to jumpto, hence we're currently in the same family
         Debug.Log(_round);
         decisionLoader.getParser(parseDescionID);
+        decisionLoader.getTriggerOut(Trigger);
         decisionLoader.LoadTextintoObject(jumpto);
         inventory.Show();
     
