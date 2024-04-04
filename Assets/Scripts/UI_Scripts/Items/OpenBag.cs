@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class OpenBag : MonoBehaviour
 {
+    //!Open Bag manages the UI for opening the player inventory
     public TextMeshProUGUI text;
     public GameObject answer;
     public GameObject inventoryUI;
@@ -15,7 +16,7 @@ public class OpenBag : MonoBehaviour
     public List<GameObject> allObjects;
     private Image image;
     private Material material;
-
+    public Decision_Loader decisionLoader;
     void Start()
     { 
         inventory = Inventory.inventory;
@@ -31,11 +32,14 @@ public class OpenBag : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (text.enabled)
+        if (text.enabled && decisionLoader.GetComplete())
         {
+            //!If text is enabled, we switch to inventory view, same goes vice versa
+            
             text.enabled = false;
             answer.SetActive(false);
             inventoryUI.SetActive(true);
+            
             UpdateGrayScale();
             return;
         }
@@ -46,6 +50,7 @@ public class OpenBag : MonoBehaviour
 
     private void UpdateGrayScale()
     {
+        //! We update through all items and look which item is contained in the player inventory, items which are not contained are displayed in a gray theme
         foreach (var VARIABLE in allObjects)
         {
             image = VARIABLE.GetComponent<Image>();

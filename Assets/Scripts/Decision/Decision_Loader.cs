@@ -8,21 +8,23 @@ public class Decision_Loader : MonoBehaviour
     private readonly reciever reciever = reciever.Reciever;
     private readonly TextReciever textReciever = TextReciever.textReciever;
     
-
-    
     public Click_Decision clickDecision;
     public TextMeshProUGUI ans1;
     public TextMeshProUGUI ans2;
     public TextMeshProUGUI ans3;
     public TextMeshProUGUI ans4;
     public TextMeshProUGUI Text;
+    public PictureDisplay pictureDisplay;
+
     private bool skipTyping = false;
     private float defaultDelay = 0.1f; // Default delay value
     private int parseDecisionID = 0;
     private bool triggerOut = false;
-    public PictureDisplay pictureDisplay;
     private int index;
-    
+    public float cooldownTime = 2f; // Cooldown time in seconds
+    private bool canSkip = true; // Flag to determine if skipping is allowed
+    private float cooldownTimer = 0f;
+    private bool complete;
     private void Start()    
     {
         LoadTextintoObject(1);
@@ -30,14 +32,39 @@ public class Decision_Loader : MonoBehaviour
     private void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && canSkip)
         {
             skipTyping = true;
+            Debug.Log("SKIPPING");
+            StartCooldown();
+
+        }
+        if (!canSkip)
+        {
+            cooldownTimer -= Time.deltaTime;
+
+            // Check if cooldown timer has reached zero
+            if (cooldownTimer <= 0)
+            {
+                // Cooldown finished, allow skipping again
+                canSkip = true;
+            }
         }
     }
 
+
+
+
+   
+    void StartCooldown()
+    {
+        // Set cooldown timer and disable skipping
+        cooldownTimer = cooldownTime;
+        canSkip = false;
+    }
     private void LoadintoObjects(int start)
     {
+        Debug.Log("index is: " + start);
         ans1.text = reciever.GetDecision(start).getdecisionDescription();
         ans2.text = reciever.GetDecision(start + 1).getdecisionDescription();
         ans3.text = reciever.GetDecision(start + 2).getdecisionDescription();
@@ -91,6 +118,7 @@ public class Decision_Loader : MonoBehaviour
 
     IEnumerator TypeText(string text, float delay,int to_call)
     {
+        complete = false;
 
         if (triggerOut )
         {
@@ -155,7 +183,7 @@ public class Decision_Loader : MonoBehaviour
         // Insert dashes after the last character is displayed
         if (lastCharDisplayed)
         {
-            // Handle the completion of typing here
+            complete = true;
         }
     }
     // Method to handle the click event of answer 1
@@ -164,6 +192,11 @@ public class Decision_Loader : MonoBehaviour
         // Implement your logic when answer 1 is clicked
     }
 
+    public bool GetComplete()
+    {
+        return complete;
+    }
+    
     // Method to handle the click event of answer 2
     public void OnAnswer2Clicked()
     {

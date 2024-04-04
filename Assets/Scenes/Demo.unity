@@ -210,10 +210,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -319,6 +319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decisionLoader: {fileID: 731116385}
   parseDescionID: 1
+  Trigger: 0
 --- !u!114 &17597017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,6 +519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decisionLoader: {fileID: 731116385}
   parseDescionID: 1
+  Trigger: 0
 --- !u!224 &294937253
 RectTransform:
   m_ObjectHideFlags: 0
@@ -584,10 +586,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -789,7 +791,6 @@ GameObject:
   m_Component:
   - component: {fileID: 652878951}
   - component: {fileID: 652878953}
-  - component: {fileID: 652878952}
   - component: {fileID: 652878954}
   m_Layer: 0
   m_Name: Notepad
@@ -813,22 +814,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1956432567}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &652878952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 652878950}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16a0027013c48a54190795984571ecb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scaleFactor: 1.2
-  imageHolder: {fileID: 0}
-  description: 
-  displaytext: {fileID: 0}
 --- !u!212 &652878953
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -980,8 +965,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleFactor: 1.2
   imageHolder: {fileID: 1614827460}
-  description: 
-  displaytext: {fileID: 0}
+  description: Timeschedule of annie's co-workers, they're all heading home early
+  displaytext: {fileID: 804529575}
 --- !u!61 &692686067
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1195,6 +1180,7 @@ GameObject:
   - component: {fileID: 731116387}
   - component: {fileID: 731116388}
   - component: {fileID: 731116389}
+  - component: {fileID: 731116390}
   m_Layer: 0
   m_Name: Decision_Border
   m_TagString: Notepad
@@ -1260,13 +1246,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 263c4de303d3fb6449cb3ed1d24232b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickDecision: {fileID: 0}
+  clickDecision: {fileID: 731116389}
   ans1: {fileID: 294937254}
   ans2: {fileID: 17597013}
   ans3: {fileID: 1391095318}
   ans4: {fileID: 2068409814}
   Text: {fileID: 1433334691}
-  pictureDisplay: {fileID: 0}
+  pictureDisplay: {fileID: 731116390}
+  cooldownTime: 2
   test: 0
 --- !u!61 &731116386
 BoxCollider2D:
@@ -1353,6 +1340,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decisionLoader: {fileID: 731116385}
   parseDescionID: 1
+  Trigger: 0
+--- !u!114 &731116390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731116382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54caf866a80905c4e9c5ee4962148d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageComponent: {fileID: 752360546}
+  pictureSprites:
+  - {fileID: 519502643, guid: 89747de2d3412da438cbf1863782bfaf, type: 3}
+  - {fileID: 21300000, guid: 9a3dbd9d954486d40843b4d9c2dfc974, type: 3}
+  - {fileID: 21300000, guid: c155575241ce82546b5b9f7c1bbec957, type: 3}
+  - {fileID: 21300000, guid: c155575241ce82546b5b9f7c1bbec957, type: 3}
+  - {fileID: 21300000, guid: c155575241ce82546b5b9f7c1bbec957, type: 3}
+  - {fileID: 21300000, guid: c155575241ce82546b5b9f7c1bbec957, type: 3}
+  - {fileID: 21300000, guid: c155575241ce82546b5b9f7c1bbec957, type: 3}
+  - {fileID: 21300000, guid: c155575241ce82546b5b9f7c1bbec957, type: 3}
+  - {fileID: 21300000, guid: c155575241ce82546b5b9f7c1bbec957, type: 3}
+  - {fileID: 21300000, guid: c155575241ce82546b5b9f7c1bbec957, type: 3}
+  - {fileID: 21300000, guid: c155575241ce82546b5b9f7c1bbec957, type: 3}
+  - {fileID: 21300000, guid: c155575241ce82546b5b9f7c1bbec957, type: 3}
+  - {fileID: 21300000, guid: c155575241ce82546b5b9f7c1bbec957, type: 3}
+  indx: 3
 --- !u!1 &752360544
 GameObject:
   m_ObjectHideFlags: 0
@@ -1410,7 +1426,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 519502643, guid: 89747de2d3412da438cbf1863782bfaf, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1515,7 +1531,7 @@ MonoBehaviour:
   m_fontSize: 40
   m_fontSizeBase: 40
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1548,7 +1564,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -19.848343, y: 0, z: -1582.3816, w: -182.0477}
+  m_margin: {x: -19.848343, y: 11.444855, z: -1582.3816, w: -182.0477}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1796,8 +1812,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleFactor: 1.2
   imageHolder: {fileID: 1614827460}
-  description: 
-  displaytext: {fileID: 0}
+  description: A flashlight big enough to eluminate an entire room
+  displaytext: {fileID: 804529575}
 --- !u!61 &1053135001
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2065,10 +2081,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -2174,6 +2190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decisionLoader: {fileID: 731116385}
   parseDescionID: 1
+  Trigger: 0
 --- !u!114 &1391095322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2965,8 +2982,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleFactor: 1.2
   imageHolder: {fileID: 1614827460}
-  description: 
-  displaytext: {fileID: 0}
+  description: Test
+  displaytext: {fileID: 804529575}
 --- !u!61 &1760639245
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3035,7 +3052,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1776358551}
   - component: {fileID: 1776358553}
-  - component: {fileID: 1776358552}
   - component: {fileID: 1776358554}
   m_Layer: 0
   m_Name: Handy
@@ -3063,22 +3079,6 @@ RectTransform:
   m_AnchoredPosition: {x: -6.3, y: -3.72}
   m_SizeDelta: {x: 2.27696, y: 5.20552}
   m_Pivot: {x: 0.49999893, y: 0.5000001}
---- !u!114 &1776358552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1776358550}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16a0027013c48a54190795984571ecb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scaleFactor: 1.2
-  imageHolder: {fileID: 0}
-  description: 
-  displaytext: {fileID: 0}
 --- !u!212 &1776358553
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3281,6 +3281,7 @@ MonoBehaviour:
   - {fileID: 1760639240}
   - {fileID: 1053134998}
   - {fileID: 692686064}
+  decisionLoader: {fileID: 731116385}
 --- !u!61 &1810459879
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3739,10 +3740,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -3848,6 +3849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decisionLoader: {fileID: 731116385}
   parseDescionID: 1
+  Trigger: 0
 --- !u!114 &2068409818
 MonoBehaviour:
   m_ObjectHideFlags: 0
