@@ -15,6 +15,8 @@ public class Decision_Loader : MonoBehaviour
     public TextMeshProUGUI ans4;
     public TextMeshProUGUI Text;
     public PictureDisplay pictureDisplay;
+    public ScrollRectHelp scrollRectHelp;
+    
 
     private bool skipTyping = false;
     private float defaultDelay = 0.1f; // Default delay value
@@ -85,9 +87,7 @@ public class Decision_Loader : MonoBehaviour
         ans2.gameObject.SetActive(false);
         ans3.gameObject.SetActive(false);
         ans4.gameObject.SetActive(false);
-
-
-
+        
         
         yield return StartCoroutine(TypeText(textReciever.GetTText(to_call).getdecisionDescription(), 0.03f,to_call));
 
@@ -105,12 +105,12 @@ public class Decision_Loader : MonoBehaviour
 
     
 
-    public void  getParser(int parseDecisionID)
+    public void  setParser(int parseDecisionID)
     {
         this.parseDecisionID = parseDecisionID;
     }
 
-    public void getTriggerOut(bool TriggerOut)
+    public void setTriggerOut(bool TriggerOut)
     {
         this.triggerOut = TriggerOut;
         
@@ -132,11 +132,38 @@ public class Decision_Loader : MonoBehaviour
         if(parseDecisionID>0)
         {
             Text.text += "<align=right><color=red>";
-            Text.text += reciever.GetDecision(parseDecisionID).getdecisionDescription();
+            for (int i = 0; i < reciever.GetDecision(parseDecisionID).getdecisionDescription().Length; i++)
+            {
+                
+                char letter = reciever.GetDecision(parseDecisionID).getdecisionDescription()[i];
+                Text.text += letter;
+              
+                if (IsLineCompleted())
+                {
+                    scrollRectHelp.AddNewLine();
+                }
+                
+                yield return new WaitForSeconds(delay);
+            }
             Text.text += "\n";
-            Text.text += reciever.GetDecision(parseDecisionID).GetFollowText();
-            Text.text += "</color></align>";
+            for (int i = 0; i < reciever.GetDecision(parseDecisionID).GetFollowText().Length; i++)
+            {
+                char letter = reciever.GetDecision(parseDecisionID).GetFollowText()[i];
+                Text.text += letter;
+                if (IsLineCompleted())
+                {
+                    scrollRectHelp.AddNewLine();
+                }
+                yield return new WaitForSeconds(delay);
+            }
+            
+            
+            
+           
         }
+        yield return new WaitForSeconds(1f);
+        Text.text += "</color=white></align=left>";
+        
 
 
 
@@ -149,6 +176,7 @@ public class Decision_Loader : MonoBehaviour
 
         for (int i = 0; i < text.Length; i++)
         {
+            
             char letter = text[i];
             Text.text += letter;
 
@@ -156,7 +184,12 @@ public class Decision_Loader : MonoBehaviour
             if (i == text.Length - 1)
             {
                 lastCharDisplayed = true;
+              
 
+            }
+            if (IsLineCompleted())
+            {
+                scrollRectHelp.AddNewLine();
             }
 
             // Check the variable to skip typing effect
@@ -167,6 +200,7 @@ public class Decision_Loader : MonoBehaviour
                 skipTyping = false;
                 break;
             }
+           
 
             yield return new WaitForSeconds(delay);
         }
@@ -175,8 +209,7 @@ public class Decision_Loader : MonoBehaviour
         Text.text += "\n";
      
 
-        Debug.Log( "HEIR ID "+triggerOut ) ;
-        
+   
 
 
 
@@ -185,7 +218,16 @@ public class Decision_Loader : MonoBehaviour
         {
             complete = true;
         }
+        
     }
+    private float previousHeight = 0f;
+    private bool IsLineCompleted()
+    {
+        float currentHeight = Text.preferredHeight;
+        bool lineCompleted = currentHeight > previousHeight; // Check if the height has increased
+        previousHeight = currentHeight;
+        return lineCompleted;
+    }   
     // Method to handle the click event of answer 1
     public void OnAnswer1Clicked()
     {
@@ -197,22 +239,5 @@ public class Decision_Loader : MonoBehaviour
         return complete;
     }
     
-    // Method to handle the click event of answer 2
-    public void OnAnswer2Clicked()
-    {
-        // Implement your logic when answer 2 is clicked
-    }
-
-    // Method to handle the click event of answer 3
-    public void OnAnswer3Clicked()
-    {
-        // Implement your logic when answer 3 is clicked
-    }
-
-    // Method to handle the click event of answer 4
-    public void OnAnswer4Clicked()
-    {
-        // Implement your logic when answer 4 is clicked
-    }
-
+ 
 }
