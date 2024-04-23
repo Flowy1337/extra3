@@ -20,6 +20,29 @@ public class Decision
     // Public properties for JSON deserialization
     public int DecisionID { get { return _decisionID; } }
     public string DecisionDescription { get { return _decisionDescription; } }
+    
+    public string DecisionFollowtext
+    {
+        get { return _followText; }
+    }
+
+    public float DecisiontimeoutVal
+    {
+        get { return _timeoutVal; }
+    }
+
+    public bool DecisiontriggerOut
+    {
+        get { return _triggerOut; }
+    }
+    public AllItems Decisionrequirment
+    {
+        get { return _requirment; }
+    }
+    public AllItems Decisionreward
+    {
+        get { return _reward; }
+    }
     public int DecisionCall { get { return _decisionCall; } }
     public int DecisionFamily { get { return _decisionFamily; } }
     public Decision(int decisionID, string decisionDescription,string followText,float timeoutVal,bool triggerOut,int decisionCall,int decisionFamily,AllItems requirment,AllItems reward)
@@ -69,5 +92,20 @@ public class Decision
     public string GetFollowText()
     {
         return this._followText;
+    }
+
+    public float GetTimeOutVal()
+    {
+        return this._timeoutVal;
+    }
+
+    public AllItems GetRequirment()
+    {
+        return this._requirment;
+    }
+
+    public int GetDecisionFamily()
+    {
+        return this._decisionFamily;
     }
 }

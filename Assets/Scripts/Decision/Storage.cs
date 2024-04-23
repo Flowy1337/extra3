@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Linq;
 public class storage : text_holder
     {
         private static storage _storage;
@@ -46,10 +46,7 @@ public class storage : text_holder
                 
         }
 
-        public void logging()
-        {
-            Debug.Log(myMap.Count + " is in store");
-        }
+   
 
         public void getAllDecision()
         {
@@ -80,7 +77,17 @@ public class storage : text_holder
             myMap.Clear();
         }
 
-    
+
+        public Decision returnLast()
+        {
+            
+            return GetDecision(myMap.Keys.Max());
+        }
+
+        public void DropStorage()
+        {
+            myMap.Clear();
+        }
 }
 
 

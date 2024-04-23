@@ -17,6 +17,7 @@ public class OpenBag : MonoBehaviour
     private Image image;
     private Material material;
     public Decision_Loader decisionLoader;
+    public GameObject AnswerWarpper;
     void Start()
     { 
         inventory = Inventory.inventory;
@@ -32,7 +33,7 @@ public class OpenBag : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (text.enabled && decisionLoader.GetComplete())
+        if (text.enabled && AnswerWarpper.activeSelf)
         {
             //!If text is enabled, we switch to inventory view, same goes vice versa
             

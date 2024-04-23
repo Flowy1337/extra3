@@ -26,6 +26,11 @@ public class Inventory
             return _inventory;
         }
     }
+    
+    public AllItems InventoryItem
+    {
+        get { return current_items; }
+    }
 
     public void Show()
     {
@@ -40,6 +45,7 @@ public class Inventory
 
     public bool contains(AllItems item)
     {
+        //!Check through set operation if item is contained
         if((current_items & item) == item)
         {
             return true;
@@ -48,4 +54,15 @@ public class Inventory
         return false;
     }
 
+    public AllItems GetCurrentItems()
+    {
+        return this.current_items;
+    }
+
+    public void DropInventory()
+    {
+        //!Since Annie will always have a Bag on here, this is the same as deleting all Items
+        this.current_items = AllItems.Bag;
+    }
+    
 }

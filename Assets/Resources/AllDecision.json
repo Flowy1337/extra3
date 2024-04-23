@@ -6,8 +6,8 @@
 
 { "_decisionID": 5, "_decisionDescription": "Jetzt noch? Es ist nach 20 Uhr!", "_followText":"Nenn mich doch...Blue. Wie dein Handy.","_timeoutVal":"10","_triggerOut":"true", "_decisionCall": 3, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
 { "_decisionID": 6, "_decisionDescription": "Puh, du arbeitest aber ganz schön lange.", "_followText":"Nenn mich einfach mal Blue. Wie dein Handy.","_timeoutVal":"10","_triggerOut":"true", "_decisionCall": 3, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
-{ "_decisionID": 7, "_decisionDescription": "Nenn mich Blue. Wie Blueberry Phone.", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 8, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
-{ "_decisionID": 8, "_decisionDescription": "Mein Name ist Blue.",  "_followText":" ","_timeoutVal":"0","_triggerOut":"0","_decisionCall": 8, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 7, "_decisionDescription": "Nenn mich Blue. Wie Blueberry Phone.", "_followText":" ","_timeoutVal":"0","_triggerOut":"false", "_decisionCall": 8, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 8, "_decisionDescription": "Mein Name ist Blue.",  "_followText":" ","_timeoutVal":"0","_triggerOut":"true","_decisionCall": 8, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
 
 { "_decisionID": 9, "_decisionDescription": "Ich bin nicht sicher.", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 4, "_decisionFamily": 3, "_requirement": "Bag", "_reward": "Bag"},
 { "_decisionID": 10, "_decisionDescription": "Du bist in meinem Handy so eingespeichert.", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 4, "_decisionFamily": 3, "_requirement": "Bag", "_reward": "Bag"},

@@ -16,7 +16,6 @@ public class Read_JSON : MonoBehaviour
             //!Iterate through each json Objet in examples and create a corresponding Decision Object.
             //!Add Decision to reciever._allDecisions.
             string requirment = example._requirement;
-            Debug.Log("Missing part is: " + requirment);
             AllItems _requirment = (AllItems)Enum.Parse(typeof(AllItems),requirment);
             string reward = example._reward;
             AllItems _reward = (AllItems)Enum.Parse(typeof(AllItems), reward);

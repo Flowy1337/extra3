@@ -14,6 +14,8 @@ TagManager:
   - A2
   - A3
   - A4
+  - HandyUI
+  - Smartphone
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,8 @@
 
 using Codice.Client.BaseCommands;
 using UnityEngine;
+using UnityEngine.Serialization;
+
 //Reciever is a singleton, by using load_decision we can load all the decision of a given typ
 //Since our gameobjects all have a unique name wen can use this script for the action handling
 
@@ -15,6 +17,7 @@ public class Click_Decision : MonoBehaviour
     Inventory inventory = Inventory.inventory;
     public int parseDescionID=0;
     public bool Trigger = false;
+    [FormerlySerializedAs("eventTrigger")] public EventExectuer eventExectuer;
     void Start()
     {
         reciever = reciever.Reciever;
@@ -24,7 +27,24 @@ public class Click_Decision : MonoBehaviour
     {
         return parseDescionID;
     }
-   
+
+    private void SetNextRound(int round)
+    {
+        storage.AddDecision(reciever.GetDecision(round)); //Round has to be the first decision of the current family
+        jumpto = reciever.GetDecision(round).getdecisionCall();
+        inventory.AddtoInventory(reciever.GetDecision(round).getReward());
+        parseDescionID = reciever.GetDecision(round).getDecisionID();
+        Trigger = reciever.GetDecision(round).getTriggerOut();
+        if (reciever.GetDecision(round).getTriggerOut())
+        {
+            Debug.Log("Decision fires event...");
+            eventExectuer.ChangePicture(reciever.GetEvent(reciever.GetDecision(round).getDecisionID()));
+
+        }
+        
+    }
+    
+    
     private void OnMouseDown()
     {
         
@@ -41,47 +61,28 @@ public class Click_Decision : MonoBehaviour
         {
             //!If a Object is clicked we add the Decision to storage._myMap, then increment round+=4 to recieve the next block of decisions
             case "A1":
-                Debug.Log("1 Antwort" + parseDescionID);
-                storage.AddDecision(reciever.GetDecision(_round)); //Round has to be the first decision of the current family
-                jumpto = reciever.GetDecision(_round).getdecisionCall();
-                inventory.AddtoInventory(reciever.GetDecision(_round).getReward());
-                parseDescionID = reciever.GetDecision(_round).getDecisionID();
-                Trigger = reciever.GetDecision(_round).getTriggerOut();
-
+                SetNextRound(_round);
                 break;
             case "A2":
-              
-                storage.AddDecision(reciever.GetDecision(_round+1));
-                jumpto = reciever.GetDecision(_round+1).getdecisionCall();
-                inventory.AddtoInventory(reciever.GetDecision(_round+1).getReward());
-                parseDescionID = reciever.GetDecision(_round).getDecisionID()+1;
-                Debug.Log("2 Antwort" + parseDescionID);
-                Trigger = reciever.GetDecision(_round).getTriggerOut();
-
+                SetNextRound(_round+1);
                 break;
-            case "A3":
-                storage.AddDecision(reciever.GetDecision(_round+2));
-                jumpto = reciever.GetDecision(_round+2).getdecisionCall();
-                inventory.AddtoInventory(reciever.GetDecision(_round+2).getReward());
-                parseDescionID = reciever.GetDecision(_round).getDecisionID()+2;
-                Trigger = reciever.GetDecision(_round).getTriggerOut();
+            case "A3":  
+                SetNextRound(_round+2);
                 break;
             case "A4":
-                storage.AddDecision(reciever.GetDecision(_round+3));
-                jumpto = reciever.GetDecision(_round+3).getdecisionCall();
-                inventory.AddtoInventory(reciever.GetDecision(_round+3).getReward());
-                parseDescionID = reciever.GetDecision(_round).getDecisionID()+3;
-                Trigger = reciever.GetDecision(_round).getTriggerOut();
+                SetNextRound(_round+3);
                 break;
         }
         _round = jumpto * 4 - 3; //! _round is set to jumpto, hence we're currently in the same family
-        Debug.Log(_round);
         decisionLoader.setParser(parseDescionID);
         decisionLoader.setTriggerOut(Trigger);
         decisionLoader.LoadTextintoObject(jumpto);
         inventory.Show();
     
     }
-      
-    
+
+    public void SetRoundExtern(int newRound)
+    {
+        _round = newRound;
+    }
 }

@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -66,7 +66,6 @@ public class Decision_Loader : MonoBehaviour
     }
     private void LoadintoObjects(int start)
     {
-        Debug.Log("index is: " + start);
         ans1.text = reciever.GetDecision(start).getdecisionDescription();
         ans2.text = reciever.GetDecision(start + 1).getdecisionDescription();
         ans3.text = reciever.GetDecision(start + 2).getdecisionDescription();
@@ -79,7 +78,7 @@ public class Decision_Loader : MonoBehaviour
         StartCoroutine(TypeTextAndLoad(to_call));
     }
 
-    public int test = 0;
+    
     IEnumerator TypeTextAndLoad(int to_call)
     {
         // Disable answer objects before typing effect
@@ -88,6 +87,7 @@ public class Decision_Loader : MonoBehaviour
         ans3.gameObject.SetActive(false);
         ans4.gameObject.SetActive(false);
         
+        ans1.transform.parent.gameObject.SetActive(false);
         
         yield return StartCoroutine(TypeText(textReciever.GetTText(to_call).getdecisionDescription(), 0.03f,to_call));
 
@@ -96,6 +96,7 @@ public class Decision_Loader : MonoBehaviour
         ans2.gameObject.SetActive(true);
         ans3.gameObject.SetActive(true);
         ans4.gameObject.SetActive(true);
+        ans1.transform.parent.gameObject.SetActive(true);
 
         int start = to_call * 4 - 3;
         LoadintoObjects(start);
@@ -120,11 +121,7 @@ public class Decision_Loader : MonoBehaviour
     {
         complete = false;
 
-        if (triggerOut )
-        {
-            pictureDisplay.DisplayPicture(index);
-            
-        }
+     
         
         
         

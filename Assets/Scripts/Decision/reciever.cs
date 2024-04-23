@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 
 public class reciever : text_holder
@@ -7,7 +8,7 @@ public class reciever : text_holder
     
     private static reciever _reciever;
     Dictionary<int, Decision> allDecisions = new Dictionary<int, Decision>();
-
+    Dictionary<int,EventHandler> allEvents= new Dictionary<int,EventHandler>();
 
     private reciever()
     {
@@ -53,6 +54,27 @@ public class reciever : text_holder
     public void Droptable()
     {
         allDecisions.Clear();
+    }
+
+    public void AddEvent(EventHandler eventHandler)
+    {
+        allEvents.Add(eventHandler.GetId,eventHandler);
+    }
+
+    public bool EventExists(Decision d)
+    {
+        return allEvents.ContainsKey(d.getDecisionID());
+    }
+
+    public EventHandler GetEvent(int id)
+    {
+        if (allDecisions.ContainsKey(id))
+        {
+            return allEvents[id];
+
+        }
+
+        return new EventHandler(0, EventEnum.inventory, "NAN");
     }
 
 
