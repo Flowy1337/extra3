@@ -35,10 +35,10 @@ public class Click_Decision : MonoBehaviour
         inventory.AddtoInventory(reciever.GetDecision(round).getReward());
         parseDescionID = reciever.GetDecision(round).getDecisionID();
         Trigger = reciever.GetDecision(round).getTriggerOut();
-        if (reciever.GetDecision(round).getTriggerOut())
+        if (reciever.GetDecision(round).getTriggerOut() && reciever.EventExists(reciever.GetDecision(round)))
         {
             Debug.Log("Decision fires event...");
-            eventExectuer.ChangePicture(reciever.GetEvent(reciever.GetDecision(round).getDecisionID()));
+            eventExectuer.triggerEvent(reciever.GetEvent(reciever.GetDecision(round).getDecisionID()));
 
         }
         

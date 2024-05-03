@@ -77,6 +77,10 @@ public class reciever : text_holder
         return new EventHandler(0, EventEnum.inventory, "NAN");
     }
 
+    public bool containsEvent(EventHandler eventHandler)
+    {
+        return allEvents.ContainsKey(eventHandler.GetId);
+    }
 
  
   

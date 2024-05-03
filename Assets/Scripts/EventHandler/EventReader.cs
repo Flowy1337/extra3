@@ -42,7 +42,7 @@ public class EventReader : MonoBehaviour
             string jsonString = $"{{\"data\":{json.text}}}";
              Debug.Log(jsonString);
             JSONWrapper wrapper = JsonUtility.FromJson<JSONWrapper>(jsonString);
-            Debug.Log("After wraooer");
+            
             //! Extract the list of JSONExample objects from the root object
             return wrapper.data;
         }

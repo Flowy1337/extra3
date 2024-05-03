@@ -3,4 +3,6 @@
     {
         inventory,
         notification,
+        backgroundpicture,
+        decisionJump
     }

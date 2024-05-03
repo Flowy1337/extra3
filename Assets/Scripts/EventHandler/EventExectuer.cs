@@ -1,16 +1,18 @@
 using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+
 using UnityEngine.UI;
 
 public class EventExectuer : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject imageHolder;
-    
+    public TextMeshProUGUI notificationObject;
+    public GameObject leftpicture;
+
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -18,17 +20,44 @@ public class EventExectuer : MonoBehaviour
     {
         
     }
-
-    public void ChangePicture(EventHandler eventHandler)
+    IEnumerator ShowNotification(string notificationText)
     {
+        // Deaktiviere das linke Bild
+        //leftpicture.SetActive(false);
+        Debug.Log("Starting notifciaton");
+        leftpicture.GetComponent<Image>().enabled = false;
+        
+        // Aktiviere das Benachrichtigungsobjekt und setze den Text
+        notificationObject.enabled = true;
+        notificationObject.text = notificationText;
+        Debug.Log("Starting waiting timer");
+
+        // Warte für die angegebene Zeit
+        yield return new WaitForSecondsRealtime(5);
+        Debug.Log("Finished");
+        leftpicture.GetComponent<Image>().enabled = true;
+
+        // Deaktiviere das Benachrichtigungsobjekt
+        notificationObject.enabled = false;
+    }
+
+   
+    public void triggerEvent(EventHandler eventHandler)
+    {
+        
         switch (eventHandler.GetType)
         {
-            case EventEnum.inventory:
-                imageHolder.GetComponent<Image>().sprite =
+            case EventEnum.backgroundpicture:
+                Debug.Log("Chanigng background now");
+                leftpicture.GetComponent<Image>().sprite =
                     Resources.Load<Sprite>("Pictures/Backgroundpictures/" + eventHandler.GetId);
                 break;
             case EventEnum.notification:
-                Debug.Log("not coverd");
+                StartCoroutine(ShowNotification(eventHandler.GetString));  
+
+                    break;
+            case EventEnum.inventory:
+                Debug.Log("inventory");
                 break;
 
         }
