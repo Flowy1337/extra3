@@ -1,13 +1,13 @@
 [
-{ "_decisionID": 1, "_decisionDescription": "Hallo Annie!","_followText":" ","_timeoutVal":"0","_triggerOut":"true", "_decisionCall": 2, "_decisionFamily": 1, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 1, "_decisionDescription": "Hallo Annie!","_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 2, "_decisionFamily": 1, "_requirement": "Bag", "_reward": "Bag"},
 { "_decisionID": 2, "_decisionDescription": "Hallo Mama, dies ist meine neue Nummer! Ich hab da ein Problem mit meinem Konto, kannst du mir helfen?", "_followText":" ","_timeoutVal":"0","_triggerOut":"1", "_decisionCall": 2, "_decisionFamily": 1, "_requirement": "Bag", "_reward": "Bag"},
 { "_decisionID": 3, "_decisionDescription": "Hallo, du. Du heißt Annie, oder?", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 2, "_decisionFamily": 1, "_requirement": "Bag", "_reward": "Bag"},
 { "_decisionID": 4, "_decisionDescription": "Annie! Wie geht's dir, alte Socke?", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 2, "_decisionFamily": 1, "_requirement": "Bag", "_reward": "Bag"},
 
 { "_decisionID": 5, "_decisionDescription": "Jetzt noch? Es ist nach 20 Uhr!", "_followText":"Nenn mich doch...Blue. Wie dein Handy.","_timeoutVal":"10","_triggerOut":"0", "_decisionCall": 3, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
-{ "_decisionID": 6, "_decisionDescription": "Puh, du arbeitest aber ganz schön lange.", "_followText":"Nenn mich einfach mal Blue. Wie dein Handy.","_timeoutVal":"10","_triggerOut":"true", "_decisionCall": 3, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 6, "_decisionDescription": "Puh, du arbeitest aber ganz schön lange.", "_followText":"Nenn mich einfach mal Blue. Wie dein Handy.","_timeoutVal":"10","_triggerOut":"0", "_decisionCall": 3, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
 { "_decisionID": 7, "_decisionDescription": "Nenn mich Blue. Wie Blueberry Phone.", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 8, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
-{ "_decisionID": 8, "_decisionDescription": "Mein Name ist Blue.",  "_followText":" ","_timeoutVal":"0","_triggerOut":"true","_decisionCall": 8, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 8, "_decisionDescription": "Mein Name ist Blue.",  "_followText":" ","_timeoutVal":"0","_triggerOut":"0","_decisionCall": 8, "_decisionFamily": 2, "_requirement": "Bag", "_reward": "Bag"},
 
 { "_decisionID": 9, "_decisionDescription": "Ich bin nicht sicher.", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 5, "_decisionFamily": 3, "_requirement": "Bag", "_reward": "Bag"},
 { "_decisionID": 10, "_decisionDescription": "Du bist in meinem Handy so eingespeichert.", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 5, "_decisionFamily": 3, "_requirement": "Bag", "_reward": "Bag"},
@@ -131,12 +131,15 @@
 
 
 
-{ "_decisionID": 105, "_decisionDescription": "Ganz langsam. Hast du einen Schlüssel bei dir?", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 28, "_decisionFamily": 27, "_requirement": "Bag", "_reward": "Bag"},
+***** NEW ***** Chapter 1
+
+
+{ "_decisionID": 105, "_decisionDescription": "Ganz langsam. Hast du einen Schlüssel bei dir?", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 28, "_decisionFamily": 27, "_requirement": "Bag", "_reward": "Bag"}
 { "_decisionID": 106, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 28, "_decisionFamily": 27, "_requirement": "Block", "_reward": "Bag"},
 { "_decisionID": 107, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 28, "_decisionFamily": 27, "_requirement": "Block", "_reward": "Bag"},
 { "_decisionID": 108, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 28, "_decisionFamily": 27, "_requirement": "Block", "_reward": "Bag"},
 
-{ "_decisionID": 109, "_decisionDescription": "Eine Chipkarte?", "_followText":"Bei Stromausfall?","_timeoutVal":"10","_triggerOut":"0", "_decisionCall": 29, "_decisionFamily": 28, "_requirement": "Bag", "_reward": "Bag"},
+{ "_decisionID": 109, "_decisionDescription": "Eine Chipkarte?", "_followText":"Bei Stromausfall?","_timeoutVal":"10","_triggerOut":"0", "_decisionCall": 29, "_decisionFamily": 28, "_requirement": "Bag", "_reward": ["Bag", "flag_Sarahdesk", "flag_Jamesdesk", "flag_Danieldesk", "flag_Oliviadesk", "flag_Emilydesk"},
 { "_decisionID": 110, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 29, "_decisionFamily": 28, "_requirement": "Block", "_reward": "Bag"},
 { "_decisionID": 111, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 29, "_decisionFamily": 28, "_requirement": "Block", "_reward": "Bag"},
 { "_decisionID": 112, "_decisionDescription": " ", "_followText":" ","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 29, "_decisionFamily": 28, "_requirement": "Block", "_reward": "Bag"},
@@ -342,6 +345,8 @@
 { "_decisionID": 272, "_decisionDescription": "", "_followText":"","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 37, "_decisionFamily": 68, "_requirement": "Block", "_reward": "Bag"},
 
 
+***** NEW ***** Chapter 2
+
 { "_decisionID": 273, "_decisionDescription": "Hm ,wie wird das denn mit Energie versorgt?", "_followText":"Ist das ein Dieselaggregat und der Diesel ist leer?","_timeoutVal":"10","_triggerOut":"0", "_decisionCall": 69, "_decisionFamily": 64, "_requirement": "Bag", "_reward": "Bag"},
 { "_decisionID": 274, "_decisionDescription": " ", "_followText":"","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 64, "_decisionFamily": 64, "_requirement": "Block", "_reward": "Bag"},
 { "_decisionID": 275, "_decisionDescription": " ", "_followText":"","_timeoutVal":"0","_triggerOut":"0", "_decisionCall": 64, "_decisionFamily": 64, "_requirement": "Block", "_reward": "Bag"},
@@ -385,7 +390,7 @@
 { "_decisionID": 305, "_decisionDescription": "Na wunderbar!", "_followText": "Nichts wie hin!", "_timeoutVal": "10", "_triggerOut": "0", "_decisionCall": 77, "_decisionFamily": 76, "_requirement": "Bag", "_reward": "Bag" },
 { "_decisionID": 306, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 76, "_decisionFamily": 76, "_requirement": "Block", "_reward": "Bag" },
 { "_decisionID": 307, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 76, "_decisionFamily": 76, "_requirement": "Block", "_reward": "Bag" },
-{ "_decisionID": 308, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 76, "_decisionFamily": 76, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 308, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 76, "_decisionFamily": 76, "_requirement": "Block", "_reward": "Bag" }
 
 { "_decisionID": 309, "_decisionDescription": "Ja! Sehr gute Idee!", "_followText": "", "_timeoutVal": "100", "_triggerOut": "1", "_decisionCall": 78, "_decisionFamily": 77, "_requirement": "Bag", "_reward": "emergency_plan" },
 { "_decisionID": 310, "_decisionDescription": "Weiß nicht.", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 79, "_decisionFamily": 77, "_requirement": "Bag", "_reward": "Bag" },
@@ -525,7 +530,257 @@
 { "_decisionID": 417, "_decisionDescription": "Was ist?", "_followText": "", "_timeoutVal": "0", "_triggerOut": "1", "_decisionCall": 105, "_decisionFamily": 104, "_requirement": "Bag", "_reward": "Bag" },
 { "_decisionID": 418, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 104, "_decisionFamily": 104, "_requirement": "Block", "_reward": "Bag" },
 { "_decisionID": 419, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 104, "_decisionFamily": 104, "_requirement": "Block", "_reward": "Bag" },
-{ "_decisionID": 420, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 104, "_decisionFamily": 104, "_requirement": "Block", "_reward": "Bag" }
+{ "_decisionID": 420, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 104, "_decisionFamily": 104, "_requirement": "Block", "_reward": "Bag" },
 
 
-  ]
+
+
+
+
+{ "_decisionID": 421, "_decisionDescription": "Schau dir das mal genauer an...", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 111, "_decisionFamily": 105, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 422, "_decisionDescription": "Whoa...hau lieber ab.", "_followText": "", "_timeoutVal": "0", "_triggerOut": "1", "_decisionCall": 105, "_decisionFamily": 105, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 423, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 105, "_decisionFamily": 105, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 424, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 105, "_decisionFamily": 105, "_requirement": "Block", "_reward": "Bag" },
+
+{ "_decisionID": 425, "_decisionDescription": "Puh...dann pass bitte gut auf dich auf.", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 107, "_decisionFamily": 106, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 426, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 106, "_decisionFamily": 106, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 427, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 106, "_decisionFamily": 106, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 428, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 106, "_decisionFamily": 106, "_requirement": "Block", "_reward": "Bag" },
+
+{ "_decisionID": 429, "_decisionDescription": "Mutig von dir.", "_followText": "Was siehst du?", "_timeoutVal": "10", "_triggerOut": "0", "_decisionCall": 112, "_decisionFamily": 107, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 430, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 107, "_decisionFamily": 107, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 431, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 107, "_decisionFamily": 107, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 432, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 107, "_decisionFamily": 107, "_requirement": "Block", "_reward": "Bag" },
+
+{ "_decisionID": 433, "_decisionDescription": "Gut!", "_followText": "Mach das!", "_timeoutVal": "5", "_triggerOut": "0", "_decisionCall": 108, "_decisionFamily": 108, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 434, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 108, "_decisionFamily": 108, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 435, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 108, "_decisionFamily": 108, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 436, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 108, "_decisionFamily": 108, "_requirement": "Block", "_reward": "Bag" },
+
+{ "_decisionID": 437, "_decisionDescription": "Alles klar, mal schauen.", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 110, "_decisionFamily": 109, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 438, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 109, "_decisionFamily": 109, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 439, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 109, "_decisionFamily": 109, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 440, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 109, "_decisionFamily": 109, "_requirement": "Block", "_reward": "Bag" },
+
+//PLACEHOLDER
+{ "_decisionID": 441, "_decisionDescription": "...", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 110, "_decisionFamily": 110, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 442, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 110, "_decisionFamily": 110, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 443, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 110, "_decisionFamily": 110, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 444, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 110, "_decisionFamily": 110, "_requirement": "Block", "_reward": "Bag" },
+
+{ "_decisionID": 445, "_decisionDescription": "Was siehst du?", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 112, "_decisionFamily": 111, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 446, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 111, "_decisionFamily": 111, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 447, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 111, "_decisionFamily": 111, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 448, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 111, "_decisionFamily": 111, "_requirement": "Block", "_reward": "Bag" },
+
+{ "_decisionID": 449, "_decisionDescription": "...", "_followText": "", "_timeoutVal": "50", "_triggerOut": "0", "_decisionCall": 113, "_decisionFamily": 112, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 450, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 112, "_decisionFamily": 112, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 451, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 112, "_decisionFamily": 112, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 452, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 112, "_decisionFamily": 112, "_requirement": "Block", "_reward": "Bag" },
+
+{ "_decisionID": 453, "_decisionDescription": "Sei bloß vorsichtig!", "_followText": "Kannst du sehen, woher das Geräusch kommt?", "_timeoutVal": "10", "_triggerOut": "0", "_decisionCall": 114, "_decisionFamily": 113, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 454, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 113, "_decisionFamily": 113, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 455, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 113, "_decisionFamily": 113, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 456, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 113, "_decisionFamily": 113, "_requirement": "Block", "_reward": "Bag" },
+
+//PLACEHOLDER
+{ "_decisionID": 457, "_decisionDescription": "...", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 115, "_decisionFamily": 114, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 458, "_decisionDescription": "Warte!", "_followText": "Such zuerst etwas, um dich im Zweifel verteidigen zu könen!", "_timeoutVal": "10", "_triggerOut": "0", "_decisionCall": 114, "_decisionFamily": 114, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 459, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 114, "_decisionFamily": 114, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 460, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 114, "_decisionFamily": 114, "_requirement": "Block", "_reward": "Bag" },
+
+//PLACEHOLDER
+{ "_decisionID": 461, "_decisionDescription": "Super! Sprich die Person an!", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 116, "_decisionFamily": 115, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 462, "_decisionDescription": "STOPP!", "_followText": "Warum waren Kratzer und Blutspuren an der Tür?", "_timeoutVal": "10", "_triggerOut": "0", "_decisionCall": 115, "_decisionFamily": 115, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 463, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 115, "_decisionFamily": 115, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 464, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 115, "_decisionFamily": 115, "_requirement": "Block", "_reward": "Bag" },
+
+{ "_decisionID": 465, "_decisionDescription": "...", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 117, "_decisionFamily": 116, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 466, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 116, "_decisionFamily": 116, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 467, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 116, "_decisionFamily": 116, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 468, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 116, "_decisionFamily": 116, "_requirement": "Block", "_reward": "Bag" },
+
+{ "_decisionID": 469, "_decisionDescription": "Verteidige dich!", "_followText": "", "_timeoutVal": "0", "_triggerOut": "1", "_decisionCall": 117, "_decisionFamily": 117, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 470, "_decisionDescription": "Lauf weg!", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 117, "_decisionFamily": 117, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 471, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 117, "_decisionFamily": 117, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 472, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 117, "_decisionFamily": 117, "_requirement": "Block", "_reward": "Bag" },
+
+//PLACEHOLDER
+{ "_decisionID": 473, "_decisionDescription": "Haarspray!", "_followText": "", "_timeoutVal": "0", "_triggerOut": "1", "_decisionCall": 118, "_decisionFamily": 118, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 474, "_decisionDescription": "Taschenlampe!", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 118, "_decisionFamily": 118, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 475, "_decisionDescription": "Weiß ich nicht! Lauf weg!", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 118, "_decisionFamily": 118, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 476, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 118, "_decisionFamily": 118, "_requirement": "Block", "_reward": "Bag" },
+
+//PLACEHOLDER
+{ "_decisionID": 477, "_decisionDescription": "Stimmt! Genau!", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 119, "_decisionFamily": 119, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 478, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 119, "_decisionFamily": 119, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 479, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 119, "_decisionFamily": 119, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 480, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 119, "_decisionFamily": 119, "_requirement": "Block", "_reward": "Bag" },
+
+//PLACEHOLDER
+{ "_decisionID": 481, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 120, "_decisionFamily": 120, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 482, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 120, "_decisionFamily": 120, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 483, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 120, "_decisionFamily": 120, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 484, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 120, "_decisionFamily": 120, "_requirement": "Block", "_reward": "Bag" },
+
+{ "_decisionID": 485, "_decisionDescription": "Haben Frauen sowas nicht immer dabei?", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 123, "_decisionFamily": 121, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 486, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 121, "_decisionFamily": 121, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 487, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 121, "_decisionFamily": 121, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 488, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 121, "_decisionFamily": 121, "_requirement": "Block", "_reward": "Bag" },
+
+{ "_decisionID": 489, "_decisionDescription": "Stimmt, guter Einfall!", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 130, "_decisionFamily": 122, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 490, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 122, "_decisionFamily": 122, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 491, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 122, "_decisionFamily": 122, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 492, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 122, "_decisionFamily": 122, "_requirement": "Block", "_reward": "Bag" },
+
+//PLACEHOLDER
+{ "_decisionID": 493, "_decisionDescription": "Dann Taschenlampe!", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 124, "_decisionFamily": 123, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 494, "_decisionDescription": "Dann lauf weg!", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 123, "_decisionFamily": 123, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 495, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 123, "_decisionFamily": 123, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 496, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 123, "_decisionFamily": 123, "_requirement": "Block", "_reward": "Bag" },
+
+{ "_decisionID": 497, "_decisionDescription": "Puh, das war aber knapp.", "_followText": "Wer oder was hat dich da angegriffen?", "_timeoutVal": "10", "_triggerOut": "0", "_decisionCall": 125, "_decisionFamily": 124, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 498, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 124, "_decisionFamily": 124, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 499, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 124, "_decisionFamily": 124, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 500, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 124, "_decisionFamily": 124, "_requirement": "Block", "_reward": "Bag" },
+
+{ "_decisionID": 501, "_decisionDescription": "Klingt ja super gruselig...", "_followText": "fast wie so ein Zombie", "_timeoutVal": "10", "_triggerOut": "0", "_decisionCall": 126, "_decisionFamily": 125, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 502, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 125, "_decisionFamily": 125, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 503, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 125, "_decisionFamily": 125, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 504, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 125, "_decisionFamily": 125, "_requirement": "Block", "_reward": "Bag" },
+
+{ "_decisionID": 505, "_decisionDescription": "Was?", "_followText": "Was ist los?", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 127, "_decisionFamily": 126, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 506, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 126, "_decisionFamily": 126, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 507, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 126, "_decisionFamily": 126, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 508, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 126, "_decisionFamily": 126, "_requirement": "Block", "_reward": "Bag" },
+
+{ "_decisionID": 509, "_decisionDescription": "Wie jetzt??", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 128, "_decisionFamily": 127, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 510, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 127, "_decisionFamily": 127, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 511, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 127, "_decisionFamily": 127, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 512, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 127, "_decisionFamily": 127, "_requirement": "Block", "_reward": "Bag" },
+
+{ "_decisionID": 513, "_decisionDescription": "Was könnte mit ihm passiert sein?", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 129, "_decisionFamily": 128, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 514, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 128, "_decisionFamily": 128, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 515, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 128, "_decisionFamily": 128, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 516, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 128, "_decisionFamily": 128, "_requirement": "Block", "_reward": "Bag" },
+
+//PLACEHOLDER
+{ "_decisionID": 517, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 129, "_decisionFamily": 129, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 518, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 129, "_decisionFamily": 129, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 519, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 129, "_decisionFamily": 129, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 520, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 129, "_decisionFamily": 129, "_requirement": "Block", "_reward": "Bag" },
+
+{ "_decisionID": 521, "_decisionDescription": "Sehr gut!", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 131, "_decisionFamily": 130, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 522, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 130, "_decisionFamily": 130, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 523, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 130, "_decisionFamily": 130, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 524, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 130, "_decisionFamily": 130, "_requirement": "Block", "_reward": "Bag" },
+
+{ "_decisionID": 525, "_decisionDescription": "Halte ihn auf Abstand!", "_followText": "Was ist mit ihm passiert?", "_timeoutVal": "10", "_triggerOut": "0", "_decisionCall": 132, "_decisionFamily": 131, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 526, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 131, "_decisionFamily": 131, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 527, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 131, "_decisionFamily": 131, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 528, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 131, "_decisionFamily": 131, "_requirement": "Block", "_reward": "Bag" },
+
+{ "_decisionID": 529, "_decisionDescription": "Und was machen wir jetzt mit ihm?", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 133, "_decisionFamily": 132, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 530, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 132, "_decisionFamily": 132, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 531, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 132, "_decisionFamily": 132, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 532, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 132, "_decisionFamily": 132, "_requirement": "Block", "_reward": "Bag" },
+
+{ "_decisionID": 533, "_decisionDescription": "Ich hab's!", "_followText": "Kannst su ihn in den kleinen Aggregatraum drängen? Vielleicht kriegen wir dann die Tür versperrt.", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 134, "_decisionFamily": 133, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 534, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 133, "_decisionFamily": 133, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 535, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 133, "_decisionFamily": 133, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 536, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 133, "_decisionFamily": 133, "_requirement": "Block", "_reward": "Bag" },
+
+{ "_decisionID": 537, "_decisionDescription": "...", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 135, "_decisionFamily": 134, "_requirement": "Bag", "_reward": "Bag" },
+{ "_decisionID": 538, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 134, "_decisionFamily": 134, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 539, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 134, "_decisionFamily": 134, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 540, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 134, "_decisionFamily": 134, "_requirement": "Block", "_reward": "Bag" },
+
+//PLACEHOLDER
+{ "_decisionID": 541, "_decisionDescription": "Wir sollten sie trotzdem versperren.", "_followText": "Eventuell lässt sie sich ja trotzdem noch von innen öffnen.", "_timeoutVal": "10", "_triggerOut": "0", "_decisionCall": 135, "_decisionFamily": 135, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 542, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 135, "_decisionFamily": 135, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 543, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 135, "_decisionFamily": 135, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 544, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 135, "_decisionFamily": 135, "_requirement": "Block", "_reward": "Bag" },
+
+{ "_decisionID": 545, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 136, "_decisionFamily": 136, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 546, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 136, "_decisionFamily": 136, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 547, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 136, "_decisionFamily": 136, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 548, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 136, "_decisionFamily": 136, "_requirement": "Block", "_reward": "Bag" },
+
+{ "_decisionID": 549, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 137, "_decisionFamily": 137, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 550, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 137, "_decisionFamily": 137, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 551, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 137, "_decisionFamily": 137, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 552, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 137, "_decisionFamily": 137, "_requirement": "Block", "_reward": "Bag" },
+
+{ "_decisionID": 553, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 138, "_decisionFamily": 138, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 554, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 138, "_decisionFamily": 138, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 555, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 138, "_decisionFamily": 138, "_requirement": "Block", "_reward": "Bag" },
+{ "_decisionID": 556, "_decisionDescription": "", "_followText": "", "_timeoutVal": "0", "_triggerOut": "0", "_decisionCall": 138, "_decisionFamily": 138, "_requirement": "Block", "_reward": "Bag" },
+
+
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
