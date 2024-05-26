@@ -17,7 +17,9 @@ public class Click_Decision : MonoBehaviour
     Inventory inventory = Inventory.inventory;
     public int parseDescionID=0;
     public bool Trigger = false;
+    public GameObject handyCanvas;
     [FormerlySerializedAs("eventTrigger")] public EventExectuer eventExectuer;
+    
     void Start()
     {
         reciever = reciever.Reciever;
@@ -47,7 +49,10 @@ public class Click_Decision : MonoBehaviour
     
     private void OnMouseDown()
     {
-        
+        if (handyCanvas.activeSelf)
+        {
+            return;
+        } 
         //! By clicking on of the 4 Gameobjects we set our Decision, afterwards, the new Decision Family is loaded.\n
         if (_round >= 40)
         {

@@ -16,6 +16,13 @@ public enum AllItems
     flag_Jamesdesk = 0b_000100_0000,
     flag_Danieldesk = 0b_0100_000000,
     flag_Oliviadesk = 0b_1000_000000,
- 
-    
+    Flag_asked_for_worktime = 0b_00000_000001,
+    Block = 0b_0000_00000010,
+    flag_testalarm = 0b_00000_000011,
+    flag_Emilydesk = 0b_0000_0000100,
+    Knife = 0b_0000_0000101,
+    Keys = 0b_0000_0000110,
+    emergency_plan = 0b_0000_0000111,
+    flag_portier = 0b_0000_0001000
+
 }

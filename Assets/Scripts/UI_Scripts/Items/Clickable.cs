@@ -45,14 +45,14 @@ public class MouseHoverCheck : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (gameObject.GetComponent<Image>().material.GetFloat("_GrayscaleAmount").Equals(0))
+       /* if (gameObject.GetComponent<Image>().material.GetFloat("_GrayscaleAmount").Equals(0))
         {
             
             Image image = gameObject.GetComponent<Image>();
             imageHolder.GetComponent<Image>().sprite = image.sprite;
             displaytext.text = description;
         }
-        
+        */
     }
     
    
